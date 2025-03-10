@@ -1,37 +1,98 @@
-*{
-        
-    text-align: center; /* centralizei todos os elementos*/
+#tudo {
+    text-align: center;
+    background: linear-gradient(#003366, #40E0D0);
+    padding: 20px; /* Adiciona espaçamento interno */
+    margin: 58.5px; /* Adiciona espaçamento externo */
+}
+    
+
+
+h1{               /* mudando o texto "login"*/
+    font-size:40px;
+    text-transform: uppercase;          /*Coloca todo o texto "login" em letras maiúsculas*/
+    font-family: tahoma;
+    /*border: 4px solid rgb(0, 51, 102);
+    background-color:rgb(0, 51, 102,0.8);
+    border-radius: 10px ;
+    padding: 20px 8px;*/
+       
+}
+input{
+    margin: 2px;
+    width: 55%;
     
 }
-h1{/* mudando o texto "login"*/
-    font-size:40px;
-    text-transform: uppercase;/*Coloca todo o texto "login" em letras maiúsculas*/
-    font-family: tahoma;
-    border: 4px solid rgb(0, 51, 102);
-   background-color:rgb(0, 51, 102,0.8);
-   border-radius: 10px ;
-   padding: 20px 8px;
-       
+
+h3 {
+margin: 2px;
+
 }   
 .Email, .senha{
-    font-size: 28px;
-    margin-bottom: 1%;
+    font-size: 18px;
+    color: rgb(0,0,0,0.8);
+    font-family:arial;
+    margin: 10px;
+   
     
 }
 .links{
-    display: flex;
-    justify-content:space-between   ;/*coloca um espaço entre eles*/
-    align-items: center;/* alinhei-os lado a lado*/
-    text-decoration:none;/* retira o sublinhado do link*/
-    color:rgb(64, 224, 208,0.8);
-    padding: 0 450px;/* cria uma margem para que as letras nao fique no limite da pagina*/
-    margin-left: 16px;
+    
+    display: block; /* Garante que cada link fique em uma linha separada */
+    text-decoration: none;
+    color: rgb(64, 224, 208, 0.8);
+    text-align: center; /* Centraliza o texto dentro de cada link */
+    margin-bottom: 10px; /* Adiciona um espaço entre os links */
+    
 
 }
+
+#senhaid, #cad{
+     color:rgb(1, 10, 88);
+    
+}
+
+
 button{ 
-    color:rgb(0, 51, 102); ;
-
+    color: white; 
+    background-color: #003366;
+    margin: 25px  25px;
+    padding: 10px;
+    width: 110px;
+    font-family: helvetica;
 }
+
+img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -40px;
+    left: -550px;
+}
+#box_email, #box_senha {
+    background-color: white;
+    color: black; /* Garante que o texto seja legível */
+}
+.formulario {
+    background: linear-gradient(to right, rgb(225, 225, 255), rgb(225, 225, 255));
+    background-size: 10px 50px;  /* Ajusta as dimensões do gradiente */
+    border-radius: 30px;
+    padding: 20px 5px;  /* 20px de padding nas partes superior e inferior, e 10px nas laterais */
+    width: 550px;  /* Define a largura do formulário */
+    margin: 0 auto;  /* Centraliza o formulário na tela */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*@media screen(max-width:580){
     .links{
         font-size: ;
