@@ -9,13 +9,15 @@ body{
 
 .box{
     background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255));
-    background-size: 10px 50px;  /* Ajusta as dimensões do gradiente */
+    
     border-radius: 30px;
-    padding: 20px 5px;  /* 20px de padding nas partes superior e inferior, e 10px nas laterais */
-    width: 550px;  /* Define a largura do formulário */
+    padding: -20px -10px;  /* 20px de padding nas partes superior e inferior, e 10px nas laterais */
+    width: 440px;  /* Define a largura do formulário */
     margin: auto;  /* Centraliza o formulário na tela */
     position: relative;
-    top: -85px;
+    top: -100px;
+
+
 }
 img{/* Altera as propiedades da Logo*/
     width: 130px; /*Largura*/
@@ -27,8 +29,21 @@ img{/* Altera as propiedades da Logo*/
 }
 .formulario{ 
     color: rgb(1, 10, 88);
+    margin: 25px  25px;
     
 
+}
+.nome1
+{
+margin-right: 140px;
+position: relative;
+bottom: -20px;
+margin-top: 50px;
+
+}
+.text1
+{
+    margin-right: -140px;
 }
 fieldset{
     text-align: center;
