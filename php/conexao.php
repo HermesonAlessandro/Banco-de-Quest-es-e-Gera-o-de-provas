@@ -1,4 +1,4 @@
-<?php // comando para inserir um código em php
+<?php // Comando para inserir um código em php
 $hostname = "localhost"; // Significa que a conexão vai ser local
 $banco_de_dados = "concurs_bank"; // Nome do banco de dados
 $usuario = "root"; // No caso significa um usuário que tem previlégios ilimitados

@@ -1,0 +1,46 @@
+body{
+    background: linear-gradient(#003366, #40E0D0);/* Cria um fundo em degradê */
+    padding: 20px; /* Cria um espaço interno de 20px dentro do elemento */
+    margin: 48.5px; /* Adiciona espaçamento externo */
+
+}
+
+.box{
+    background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255)); /* Cria um fundo degradê que vai da esquerda para a direita iniciando pela um rgb da cor azul claro quase branco
+    e gradualmente muda seu rgb para um tom levemente semelhante */
+    border-radius: 30px; /* Deixa os cantos do elemento arredondados com um raio de 30px */
+    padding: -20px -10px;  /* 20px de padding nas partes superior e inferior, e 10px nas laterais */
+    width: 440px;  /* Define a largura do formulário */
+    margin: auto;  /* Centraliza o formulário na tela */
+    position: relative; /* Define que o posicionamento do elemento será relativo à sua posição normal no fluxo do layout */
+    top: -100px; /* Move o elemento 100px para cima */
+}
+
+img {
+    width: 150px; /* Defina um tamanho desejado para a largura */
+    height: auto; /* Mantém a proporção original da imagem */
+    position: relative; /* Define que o posicionamento do elemento será relativo à sua posição normal no fluxo do layout */
+    top: -70px; /* Move objeto 70px para cima em relação à sua posição original */
+    left: -50px; /* Move objeto para a direita 50px em relação a sua posição original */
+}
+
+.formulario{ 
+    color: rgb(1, 10, 88); /* Define uma cor rgb para tags nomeadas com essa classe*/
+    margin: 25px  25px; /* Cria um espaçamento externo entre um elemento e os outros ao seu redor */
+}
+
+.nome1{
+margin-right: 140px; /* Define um espaçamento externo de 140px no lado direito do elemento */
+position: relative; /* Define que o posicionamento do elemento será relativo à sua posição normal no fluxo do layout */
+bottom: -20px; /* Move o elemento 20px para baixo em relação à sua posição original */
+margin-top: 50px; /* Adiciona um espaçamento externo de 50px acima do elemento */
+}
+
+.text1{
+    margin-right: -140px; /* Define uma margem externa negativa de 140px do lado direito do elemento */
+}
+
+fieldset{
+    text-align: center; /* Centraliza do contéudo para o centro */
+    margin: 110px; /* Altera o Quadrado onde se encontra o Formulário*/
+}

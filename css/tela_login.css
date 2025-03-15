@@ -1,83 +1,77 @@
-#tudo {
-    text-align: center; /* Centraliza todo o testo do formulário de Login*/
-    background: linear-gradient(#003366, #40E0D0);/* cria um fundo em degradê */
+#corpo_do_site {
+    text-align: center; /* Centraliza todo o testo do formulário de Login */
+    background: linear-gradient(#003366, #40E0D0);/* Cria um fundo em degradê */
     padding: 20px; /* Adiciona espaçamento interno */
     margin: 10.5px; /* Adiciona espaçamento externo */
 }
 
-h1{ /*Altera o texto "Login"*/
-    font-size: 50px;
-    height: -30px;
-    color: #003366;
+h1{ /* Altera o texto "Login"*/
+    font-size: 50px; /* Altera o tamanho do texto */
+    height: 50px; /* Trabalha a altura do texto */
+    color: #003366; /* Altera a cor  do texto para um tom azul escuro */ 
 }
 
-input{/*Altera as caixas de texto*/
-    margin: 2px;
-    width: 55%;
-    
+input{/* Altera as caixas de texto*/
+    margin: 2px; /* Adiciona um pequeno espaçamento externo de 2px  ao redor das caixas de texto */
+    width: 55%;  /* Define que a largura das caixas será de 55% do elemento pai */
 }
 
 h3 {   /*  alterar o texto "senha" e "email"*/
-margin: 2px;
-
+    margin: 2px; /* Adiciona um pequeno espaçamento externo de 2px  ao redor das caixas de texto */
 }   
-.Email, .senha{ /*Altera as Divs do email e da senha*/
-    font-size: 18px;
-    color: rgb(0,0,0,0.8);
-    font-family:arial;
-    margin: 10px;
-   
-    
-}
-.links{  /*Altera os textos em links*/
-    
-    display: block; /*Garante que cada link fique em uma linha separada */
-    text-decoration: none;
-    color: rgb(1, 10, 88);
-    text-align: center; /* Centraliza o texto dentro de cada link */
-    margin-bottom: 10px; /*Adiciona um espaço entre os links */
-    margin: 10px; /*Altera a margem deles com a tela deformulário*/
 
+.Email, .senha{ /*Altera as Divs do email e da senha */
+    font-size: 18px; /* Define o tamanho da fonte do texto */
+    color: rgb(0,0,0,0.8); /* Preto com opacidade de 80% */ 
+    font-family:arial; /* Usa a fonte Arial para o texto */
+    margin: 10px; /* Adiciona 10px de espaçamento externo ao redor */
+}   
+
+.links{  /* Altera os textos em links*/    
+    display: block; /* Garante que cada link fique em uma linha separada */
+    text-decoration: none; /* Remove o sublinhados dos links */
+    color: rgb(1, 10, 88); /* Azul escuro */
+    text-align: center; /* Centraliza o texto dentro de cada link */
+    margin-bottom: 10px; /* Adiciona um espaço entre os links */
+    margin: 10px; /* Altera a margem deles com a tela deformulário*/
 }
 
 button{ /* Altera as propiededades do botao de "entrar"*/
-    color: white; 
-    background-color: #003366;
-    margin: 25px  25px;
-    padding: 10px; /*Altera a altura do botão*/
-    width: 110px; /*Altera a largura do botao*/
-    font-family: helvetica;
+    color: white; /* Definição da cor */
+    background-color: #003366; /* Definição do fundo */
+    margin: 25px  25px; /* Adiciona 25px de espaçamento externo em todas as direções */
+    padding: 10px; /* Altera a altura do botão*/
+    width: 110px; /* Altera a largura do botao*/
+    font-family: helvetica; /* Usa a fonte Helvetica para o texto do botão */
 }
 
-img{ /* Altera as propiedades da Logo*/
-    width: 130px; /*Largura*/
-    height: 145.5px; /*Altura*/
-    position: relative;
-    top: -40px;
-    left: -550px;
+img{ /* Altera as propiedades da Logo */
+    width: 130px; /* Largura */
+    height: 145.5px; /* Altura */
+    position: relative; /* Permite deslocar a imagem em relação à sua posição original */
+    top: -40px; /* Move 40px para cima */
+    left: -550px; /* Move 550px para a esquerda */
 }
+
 #box_email, #box_senha { /* Altera as caixas de preenchimento de senha e email */
-    background-color: white;
+    background-color: white; /* Cor do fundo */
     color: black; /* Garante que o texto seja legível */
-    padding:9.5px ;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 0.1px;
-
-    
+    padding:9.5px ; /* Adiciona um espaçamento de 9.5px em todos os lados */
+    border-radius: 20px; /* Arredonda as bordas das caixas */
+    border-style: solid; /* Defina a borda como sólida */
+    border-width: 0.1px; /* Defina a espessura muito fina */
 }
+
 .formulario { /* altera todo o formulario*/
-    background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255));
+    background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255)); /* Define um fundo degradê com cores azul-claro */
     background-size: 10px 50px;  /* Ajusta as dimensões do gradiente */
-    border-radius: 30px;
+    border-radius: 30px; /* Arredonda os cantos do formulário */
     padding: 20px 5px;  /* 20px de padding nas partes superior e inferior, e 10px nas laterais */
     width: 550px;  /* Define a largura do formulário */
     margin: 0 auto;  /* Centraliza o formulário na tela */
-    position: relative;
-    top: -85px;
-    
+    position: relative; /* Permite deslocar o formulário visualmente */
+    top: -85px; /* Desloca o formulário 85px para cima */
 }
-
 
 /*@media screen(max-width:580){
     .links{

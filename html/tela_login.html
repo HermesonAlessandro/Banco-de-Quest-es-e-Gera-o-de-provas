@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define que o documento está em português do Brasil -->
 <head>
+    <!-- Link para o CSS externo que estiliza a página -->
     <link rel="stylesheet" type="text/css" href="../css/tela_login.css" media="screen" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de login</title>
+    
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o layout responsivo em dispositivos móveis -->
+    <title>Tela de login</title> <!-- Título exibido na aba do navegador -->
 </head>
-<body id="tudo">
-    <img src="../Img/Logo(CB).png" alt="Logo de Trab">
+<body id="corpo_do_site"> <!-- Atributo "id" usado para estilizar o corpo da página -->
+
+    <!-- Logotipo da página -->
+    <img src="../Img/Logo(CB).png" alt="Logo de Trab"> <!-- Adiciona a imagem do logotipo e usa texto alternativo caso a imagem não seja carregada -->
+    
+    <!-- Div principal que engloba o formulário -->
     <div class="formulario">
-        <h1>Login</h1>
-        <form action="#" method="post">
+        <h1>Login</h1> <!-- Cabeçalho principal da página -->
+
+        <!-- Formulário -->
+        <form action="#" method="post"> <!-- Define o formulário que utiliza o método POST -->
+            <!-- Campo de entrada de e-mail -->
             <div class="Email">
-                <h3>E-mail:</h3>
-                <input id="box_email" type="email" placeholder="Digite seu E-mail" required>
+                <h3>E-mail:</h3> <!-- Subtítulo do campo de e-mail -->
+                <input id="box_email" type="email" placeholder="Digite seu E-mail" required> <!-- Campo de entrada para o e-mail, com validação obrigatória -->
             </div>
+            
+            <!-- Campo de entrada de senha -->
             <div class="senha">
-                <h3>Senha:</h3>
-                <input id="box_senha" type="password" placeholder="Digite sua Senha" required>
+                <h3>Senha:</h3> <!-- Subtítulo do campo de senha -->
+                <input id="box_senha" type="password" placeholder="Digite sua Senha" required> <!-- Campo de entrada para a senha, com validação obrigatória -->
             </div>
-            <button type="submit">Entrar</button>
+
+            <!-- Botão para enviar o formulário -->
+            <button type="submit">Entrar</button> <!-- Botão "Entrar" -->
         </form>
+        
+        <!-- Links adicionais abaixo do formulário -->
         <div class="links">
-            <a id="senhaid" href="#">Esqueceu a senha?</a>
+            <!-- Link para redefinir a senha -->
+            <a id="link_senha" href="#">Esqueceu a senha?</a>
             <br>
-            <a id="cad" href="#">Não tem uma conta? Cadastre-se</a>
+            <!-- Link para a página de cadastro -->
+            <a id="link_cadastro" href="#">Não tem uma conta? Cadastre-se</a>
         </div>
     </div>
+
+    <!-- Script externo para adicionar funcionalidades (JavaScript) -->
     <script src="../js/script.js"></script>
 </body>
 </html>

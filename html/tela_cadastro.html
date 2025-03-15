@@ -1,47 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define que o documento HTML é em português do Brasil -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="C:\xampp\htdocs\Banco-de-Quest-es-e-Gera-o-de-provas\css\tela_cad.css">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante que o layout seja responsivo -->
+    <link rel="stylesheet" href="../css/tela_cadastro.css"> <!-- Link para o arquivo CSS externo -->
     
-    <title>Tela de cadastro</title>
+    <title>Tela de cadastro</title> <!-- Título da página -->
 </head>
 <body>
-    <img src="../Img/Logo(CB).png" alt="Logo de Trab">
+    <!-- Logotipo -->
+    <img src="../Img/Logo(CB).png" alt="Logo do trabalho"> <!-- Adiciona a imagem do logotipo, com texto alternativo "Logo de Trab" -->
+
+    <!-- Caixa principal que contém o formulário -->
     <div class="box">
-        <form class ="formulario" action="">
-            <fieldset><b>Cadastro</b>
-            <br>
-            <div class="inputBox">
-                <label class="nome1" for="nome"><b> NomeCompleto:</b></label>
-                <input class="text1" type="text" name="nome" id="nome" class="inputUser" required
-                placeholder="Digite seu nome">              
-            </div>
+        <!-- Formulário de cadastro -->
+        <form class="formulario" method="post"> <!-- Nome do formulário juntamente com o método que é post ou seja não vai aparecer na url logo acima -->
+            <fieldset>
+                <b>Cadastro</b> <!-- Título do formulário -->
+                <br>
+                <!-- Campo para nome completo -->
+                <div class="inputBox">
+                    <label class="nome1" for="nome"><b> Nome Completo:</b></label> <!-- Etiqueta para o campo "nome" -->
+                    <input class="text1" type="text" name="nome" id="nome" class="inputUser" required
+                    placeholder="Digite seu nome"> <!-- Campo de texto obrigatório com placeholder -->
+                </div>
 
-            <div class="inputBox">
-                <label for="nome"><b>E-mail:</b></label>
-                <input type="email" name="email" id="email" class="inputUser" required
-                placeholder="Digite seu email">               
-            </div>
+                <!-- Campo para e-mail -->
+                <div class="inputBox">
+                    <label for="nome"><b>E-mail:</b></label> <!-- Etiqueta para o campo "e-mail" -->
+                    <input type="email" name="email" id="email" class="inputUser" required
+                    placeholder="Digite seu email"> <!-- Campo de entrada de e-mail obrigatório -->
+                </div>
 
-            <div class="inputBox">
-                <label for="nome"><b>Senha:</b></label>
-                <input type="password" name="senha" id="senha" class="inputUser" required
-                placeholder="Digite sua senha">                 
-            </div>
+                <!-- Campo para senha -->
+                <div class="inputBox">
+                    <label for="nome"><b>Senha:</b></label> <!-- Etiqueta para o campo "senha" -->
+                    <input type="password" name="senha" id="senha" class="inputUser" required
+                    placeholder="Digite sua senha"> <!-- Campo de entrada de senha obrigatório -->
+                </div>
 
-            <div class="inputBox">
-                <label for="perfil"><b>Selecione seu Perfil:</b></label>   
-                <select name="perfil" id="perfil">   
-                    <option value="perfil">Aluno</option>
-                    <option value="perfil">Professor</option>
-                    <option value="perfil">Instituição de Ensino</option>
-                </select>
-            </div>
-            
-            <a href="tela_login.html"><button>Cadastrar</button></a>
+                <!-- Seletor de perfil -->
+                <div class="inputBox">
+                    <label for="perfil"><b>Selecione seu Perfil:</b></label>   
+                    <select name="perfil" id="perfil">   
+                        <option value="perfil">Aluno</option> <!-- Opção "Aluno" -->
+                        <option value="perfil">Professor</option> <!-- Opção "Professor" -->
+                    </select>
+                </div>
+
+                <!-- Botão de cadastro -->
+                <a href="tela_login.html"><button>Cadastrar</button></a> <!-- Link para a tela de login após o cadastro -->
             </fieldset>    
         </form> 
+    </div>
 </body>
 </html>
