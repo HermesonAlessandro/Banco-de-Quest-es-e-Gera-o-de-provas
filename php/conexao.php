@@ -1,4 +1,4 @@
-<?php // Comando para inserir um código em php
+<?php
 $hostname = "localhost"; // Significa que a conexão vai ser local
 $banco_de_dados = "concurs_bank"; // Nome do banco de dados
 $usuario = "root"; // No caso significa um usuário que tem previlégios ilimitados
@@ -20,4 +20,4 @@ if($mysqli -> connect_errno){
 Basicamente, esse trecho de código está verificando se a conexão com o banco de dados foi estabelecida com sucesso ou não, 
 e exibindo a mensagem correspondente.
 */
-//Fechamento do código em php?>
+?>

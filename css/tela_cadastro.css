@@ -2,7 +2,6 @@ body{
     background: linear-gradient(#003366, #40E0D0);/* Cria um fundo em degradê */
     padding: 20px; /* Cria um espaço interno de 20px dentro do elemento */
     margin: 48.5px; /* Adiciona espaçamento externo */
-
 }
 
 .box{

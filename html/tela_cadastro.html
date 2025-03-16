@@ -14,28 +14,35 @@
     <!-- Caixa principal que contém o formulário -->
     <div class="box">
         <!-- Formulário de cadastro -->
-        <form class="formulario" method="post"> <!-- Nome do formulário juntamente com o método que é post ou seja não vai aparecer na url logo acima -->
+        <form class="formulario" method="post" action="../php/cadastro.php"> <!-- Essa parte diz o nome do formulário, a forma que vai aparecer na url logo acima da página, apontamento para o php-->
             <fieldset>
                 <b>Cadastro</b> <!-- Título do formulário -->
                 <br>
                 <!-- Campo para nome completo -->
                 <div class="inputBox">
-                    <label class="nome1" for="nome"><b> Nome Completo:</b></label> <!-- Etiqueta para o campo "nome" -->
-                    <input class="text1" type="text" name="nome" id="nome" class="inputUser" required
-                    placeholder="Digite seu nome"> <!-- Campo de texto obrigatório com placeholder -->
+                    <label class="lab_cpf" for="cpf"><b> Cpf:</b></label> <!-- Etiqueta para o campo "cpf" -->
+                    <input class="box_cpf" type="text" name="cpf" id="cpf" class="inputUser" required
+                    placeholder="Digite seu cpf"> <!-- Campo de texto obrigatório com placeholder -->
+                </div>
+
+                <!-- Campo para nome completo -->
+                <div class="inputBox">
+                    <label class="lab_nome_completo" for="nome"><b> Nome Completo:</b></label> <!-- Etiqueta para o campo "nome" -->
+                    <input class="box_nome_completo" type="text" name="nome" id="nome" class="inputUser" required
+                    placeholder="Digite o nome completo"> <!-- Campo de texto obrigatório com placeholder -->
                 </div>
 
                 <!-- Campo para e-mail -->
                 <div class="inputBox">
                     <label for="nome"><b>E-mail:</b></label> <!-- Etiqueta para o campo "e-mail" -->
-                    <input type="email" name="email" id="email" class="inputUser" required
+                    <input class="box_email" type="text" name="email" id="email" class="inputUser" required
                     placeholder="Digite seu email"> <!-- Campo de entrada de e-mail obrigatório -->
                 </div>
 
                 <!-- Campo para senha -->
                 <div class="inputBox">
                     <label for="nome"><b>Senha:</b></label> <!-- Etiqueta para o campo "senha" -->
-                    <input type="password" name="senha" id="senha" class="inputUser" required
+                    <input class="box_password" type="text" name="senha" id="senha" class="inputUser" required
                     placeholder="Digite sua senha"> <!-- Campo de entrada de senha obrigatório -->
                 </div>
 
