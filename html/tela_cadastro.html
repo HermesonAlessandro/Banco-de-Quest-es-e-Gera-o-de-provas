@@ -14,7 +14,7 @@
     <!-- Caixa principal que contém o formulário -->
     <div class="box">
         <!-- Formulário de cadastro -->
-        <form class="formulario" method="post" action="../php/cadastro.php"> <!-- Essa parte diz o nome do formulário, a forma que vai aparecer na url logo acima da página, apontamento para o php-->
+        <form class="formulario" method="post" action="../php/telacad_cadastrar.php"> <!-- Essa parte diz o nome do formulário, a forma que vai aparecer na url logo acima da página, apontamento para o php-->
             <fieldset>
                 <b>Cadastro</b> <!-- Título do formulário -->
                 <br>
@@ -36,13 +36,13 @@
                 <div class="inputBox">
                     <label for="nome"><b>E-mail:</b></label> <!-- Etiqueta para o campo "e-mail" -->
                     <input class="box_email" type="text" name="email" id="email" class="inputUser" required
-                    placeholder="Digite seu email"> <!-- Campo de entrada de e-mail obrigatório -->
+                    placeholder="Digite seu email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" title="Insira um endereço de e-mail válido. Exemplo: usuario@dominio.com"> <!-- Campo de entrada de e-mail obrigatório -->
                 </div>
 
                 <!-- Campo para senha -->
                 <div class="inputBox">
                     <label for="nome"><b>Senha:</b></label> <!-- Etiqueta para o campo "senha" -->
-                    <input class="box_password" type="text" name="senha" id="senha" class="inputUser" required
+                    <input class="box_password" type="password" name="senha" id="senha" class="inputUser" required
                     placeholder="Digite sua senha"> <!-- Campo de entrada de senha obrigatório -->
                 </div>
 
