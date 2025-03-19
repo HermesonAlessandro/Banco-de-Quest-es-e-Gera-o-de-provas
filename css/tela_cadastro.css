@@ -1,45 +1,66 @@
+
 body{
+   
     background: linear-gradient(#003366, #40E0D0);/* Cria um fundo em degradê */
     padding: 20px; /* Cria um espaço interno de 20px dentro do elemento */
     margin: 48.5px; /* Adiciona espaçamento externo */
 }
+#txt_cadastro{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 45px; /* altera o tamnho da fonte */
+    color: #003366;  /* Altera a cor da font */
+}
 
 .box{
-    background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255)); /* Cria um fundo degradê que vai da esquerda para a direita iniciando pela um rgb da cor azul claro quase branco
+    background: linear-gradient(to right, white, rgb(248, 247, 252)); /* Cria um fundo degradê que vai da esquerda para a direita iniciando pela um rgb da cor azul claro quase branco
     e gradualmente muda seu rgb para um tom levemente semelhante */
     border-radius: 30px; /* Deixa os cantos do elemento arredondados com um raio de 30px */
+    display: flex;  /* layout deles é controlado de forma mais dinâmica e eficiente, sem precisar de posicionamento manual  */
     padding: -20px -10px;  /* 20px de padding nas partes superior e inferior, e 10px nas laterais */
-    width: 440px;  /* Define a largura do formulário */
+    width: 700px;  /* Define a largura do formulário */
     margin: auto;  /* Centraliza o formulário na tela */
     position: relative; /* Define que o posicionamento do elemento será relativo à sua posição normal no fluxo do layout */
     top: -100px; /* Move o elemento 100px para cima */
+
 }
 
 img {
-    width: 150px; /* Defina um tamanho desejado para a largura */
-    height: auto; /* Mantém a proporção original da imagem */
-    position: relative; /* Define que o posicionamento do elemento será relativo à sua posição normal no fluxo do layout */
-    top: -70px; /* Move objeto 70px para cima em relação à sua posição original */
-    left: -50px; /* Move objeto para a direita 50px em relação a sua posição original */
+    width: 130px; /* Largura */
+    height: 140.5px; /* Altura */
+    position: relative; /* Permite deslocar a imagem em relação à sua posição original */
+    top: -67px; /* altura da posição da imagem */
+    right: 50px; /* posição horizontal direita da imagem */ 
 }
 
 .formulario{ 
-    color: rgb(1, 10, 88); /* Define uma cor rgb para tags nomeadas com essa classe*/
-    margin: 25px  25px; /* Cria um espaçamento externo entre um elemento e os outros ao seu redor */
+    color: rgb(0, 0, 0,0.8); /* Define uma cor rgb para tags nomeadas com essa classe*/
+    margin: 10px  25px; /* Cria um espaçamento externo entre um elemento e os outros ao seu redor */
+  
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.nome1{
-margin-right: 140px; /* Define um espaçamento externo de 140px no lado direito do elemento */
-position: relative; /* Define que o posicionamento do elemento será relativo à sua posição normal no fluxo do layout */
-bottom: -20px; /* Move o elemento 20px para baixo em relação à sua posição original */
-margin-top: 50px; /* Adiciona um espaçamento externo de 50px acima do elemento */
+.box_cpf, .box_nome_completo, .box_email, .box_password {
+    position: relative;
+    bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 30px; /* Aumenta o Tamanho das Fontes */
+
+    display: flex; /* Torna a caixa um contêiner flexível */
+    flex-direction: column; /* Empilha o conteúdo verticalmente */
+    align-items: center; /* Alinha os itens no centro horizontalmente */
 }
 
-.text1{
-    margin-right: -140px; /* Define uma margem externa negativa de 140px do lado direito do elemento */
+.lab_cpf, .lab_nome_completo, .lab_email{/* */
+    margin-right: 0px; /* Define uma margem externa negativa de 140px do lado direito do elemento */
+    
 }
 
-fieldset{
+fieldset{         /* Altera o Quadrado onde se encontra o Formulário */
+    font-size: 30px; /* Aumenta o tamanho da Font dos cabeçalhos */
     text-align: center; /* Centraliza do contéudo para o centro */
-    margin: 110px; /* Altera o Quadrado onde se encontra o Formulário*/
+    margin: 0px; /* Altera o Quadrado onde se encontra o Formulário*/
+    border: none; /* retira toda as bordas dos cabeçalhos */
+    position: relative;
+    left: 120px;
 }

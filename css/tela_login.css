@@ -5,7 +5,7 @@
     margin: 10.5px; /* Adiciona espaçamento externo */
 }
 
-h1{ /* Altera o texto "Login"*/
+#txt_login{ /* Altera o texto "Login"*/
     font-size: 50px; /* Altera o tamanho do texto */
     height: 50px; /* Trabalha a altura do texto */
     color: #003366; /* Altera a cor  do texto para um tom azul escuro */ 
