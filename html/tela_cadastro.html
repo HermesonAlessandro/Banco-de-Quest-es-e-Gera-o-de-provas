@@ -19,37 +19,37 @@
                 <b id = "txt_cadastro">Cadastro</b> <!-- Título do formulário -->
                 <br>
                 <!-- Campo para cpf -->
-                <div class="inputBox">
+                <div class="inputbox">
                     <label class="lab_cpf" for="cpf"><b>CPF:</b></label>
                     <input class="box_cpf" type="text" name="cpf" id="cpf" class="inputUser" required
                     placeholder="Digite seu CPF" pattern="\d{11}" title="Digite exatamente 11 números para o CPF">
                 </div>
                 
                 <!-- Campo para nome completo -->
-                <div class="inputBox">
+                <div class="inputbox">
                     <label class="lab_nome_completo" for="nome"><b> Nome Completo:</b></label> <!-- Etiqueta para o campo "nome" -->
                     <input class="box_nome_completo" type="text" name="nome" id="nome" class="inputUser" required
                     placeholder="Digite o nome completo"> <!-- Campo de texto obrigatório com placeholder -->
                 </div>
 
                 <!-- Campo para e-mail -->
-                <div class="inputBox">
+                <div class="inputbox">
                     <label class = "lab_email" for="nome"><b>E-mail:</b></label> <!-- Etiqueta para o campo "e-mail" -->
                     <input class="box_email" type="text" name="email" id="email" class="inputUser" required
                     placeholder="Digite seu email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" title="Insira um endereço de e-mail válido. Exemplo: usuario@dominio.com"> <!-- Campo de entrada de e-mail obrigatório -->
                 </div>
 
                 <!-- Campo para senha -->
-                <div class="inputBox">
+                <div class="inputbox">
                     <label for="nome"><b>Senha:</b></label> <!-- Etiqueta para o campo "senha" -->
                     <input class="box_password" type="password" name="senha" id="senha" class="inputUser" required
                     placeholder="Digite sua senha"> <!-- Campo de entrada de senha obrigatório -->
                 </div>
 
                 <!-- Seletor de perfil -->
-                <div class="inputBox">
-                    <label for="perfil"><b>Selecione seu Perfil:</b></label>   
-                    <select name="perfil" id="perfil" required>   
+                <div class="inputbox">
+                    <label  for="perfil"><b>Selecione seu Perfil:</b></label>   
+                    <select id ="label_perfil" name="perfil" id="perfil" required>   
                         <option value="" disabled selected>Escolha o perfil</option> <!-- Placeholder inicial -->
                         <option value="Aluno">Aluno</option> <!-- Valor correto para aluno -->
                         <option value="Professor">Professor</option> <!-- Valor correto para professor -->
@@ -57,8 +57,8 @@
                 </div>
                 
                 <!-- Botão de cadastro -->
-                <a href="tela_login.html"><button>Cadastrar</button></a> <!-- Link para a tela de login após o cadastro -->
-                <a href="tela_inicial.html"><button>Voltar</button></a> <!-- Link para a tela de inicio caso queira voltar -->
+                <a  href="tela_login.html"><button id ="buttons" >Cadastrar</button></a> <!-- Link para a tela de login após o cadastro -->
+                <a href="tela_inicial.html"><button id = "buttons" >Voltar</button></a> <!-- Link para a tela de inicio caso queira voltar -->
             </fieldset>    
         </form> 
     </div>
