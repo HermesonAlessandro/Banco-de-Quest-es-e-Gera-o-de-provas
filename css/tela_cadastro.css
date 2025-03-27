@@ -15,7 +15,7 @@
 .formulario{ 
     color: rgb(0, 0, 0,0.8); /* Define uma cor rgb para tags nomeadas com essa classe*/
     margin: 10px  25px; /* Cria um espaçamento externo entre um elemento e os outros ao seu redor */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*   */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Escolha de fonte Arial  */
 }
 
 .box_cpf, .box_nome_completo, .box_email, .box_password {
@@ -30,7 +30,7 @@
     align-items: center; /* Alinha os itens no centro horizontalmente */
 }
 
-.lab_cpf, .lab_nome_completo, .lab_email{/* */
+.lab_cpf, .lab_nome_completo, .lab_email{/* Texto de CPF, " nome completo" e do email */
     margin-right: 0px; /* Define uma margem externa negativa de 140px do lado direito do elemento */
     
 }
@@ -38,15 +38,15 @@
 /*---------------------------------------------------------IDs-----------------------------------------------------------------------------*/
 
 #txt_cadastro{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  /*Escolha de fonte Ariel*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  /*Escolha de fonte Arial*/
     font-size: 45px; /* altera o tamnho da fonte */
     color: #003366;  /* Altera a cor da font */
 }
 #label_perfil, #buttons{
-    color:white;
+    color:white; /* Altera as cores das fontes */
     background: linear-gradient( to right, #003366, #40E0D0);/* Cria um fundo em degradê */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;/* Escolha de fonte Arial  */
+    font-size: 20px; /* Aumenta o tamanho da Font dos botões  */ 
 }
 
 

@@ -1,0 +1,28 @@
+/*---------------------------------------------------------NOMES-----------------------------------------------------------------------------*/
+
+body{     /*Altera todo o coteudo da pág */
+    background: linear-gradient( to right, #003366, #40E0D0);/* Cria um fundo em degradê */
+    
+}
+/*---------------------------------------------------------IDs-----------------------------------------------------------------------------*/
+#botton_sobre{ /* Fazer as alterações no botão de "sobre Nos" */
+    position: relative; /* Facilita a movimentação do objeto */
+    left: 1030px; /* Move o objeto da esquerda para a direita */
+    width: 100px;  /* Altera a Largura do botão */ 
+    padding: 10px;/* Altera a altura do botão*/
+    color: white;  /* Altera a cor do texto do botão  */
+    background-color: rgba(0, 0, 0, 0.334); /*  Altera a cor do funndo do botão */
+}
+
+
+/*---------------------------------------------------------CLASS-----------------------------------------------------------------------------*/
+.box_search
+{
+    position: relative;  /* Facilita a movimentação do objeto da caixa de pesquisa */  
+    left: 550px; /* Move o objeto da esquerda para a direita da caixa de pesquisa */
+    width: 255px;  /* Altera a Largura da caixa de pesquisa */ 
+    padding: 10px; /* Altera a altura da caixa de pesquisa */
+    margin-right:-80px ; /* altera a margem que faz o " sobre nos" ficar mais perto da caixa de pesquisa */
+    border: 2px solid black;/* adiciona uma borda preta na caixa de pesquisa */
+    border-radius: 30px;  /* Areedonda essa borda em 30px */
+}
