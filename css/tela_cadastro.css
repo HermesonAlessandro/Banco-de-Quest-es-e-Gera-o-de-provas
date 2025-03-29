@@ -1,75 +1,105 @@
 /*---------------------------------------------------------CLASS-----------------------------------------------------------------------------*/
 
-.box{
-    background: linear-gradient(to right, white, rgb(248, 247, 252)); /* Cria um fundo degradê que vai da esquerda para a direita iniciando pela um rgb da cor azul claro quase branco
-    e gradualmente muda seu rgb para um tom levemente semelhante */
-    border-radius: 30px; /* Deixa os cantos do elemento arredondados com um raio de 30px */
+.box{   /* Altera toda a caixa onde se encontra o formulário  */
+    background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255)); /* Define um fundo degradê com cores azul-claro e gradualmente muda seu rgb para um tom levemente semelhante */
+    border-radius: 3%; /* Deixa os cantos da caixa onde se encontra o formulário arredondados com um raio de 30px */
     display: flex;  /* layout deles é controlado de forma mais dinâmica e eficiente, sem precisar de posicionamento manual  */
-    padding: -20px -10px;  /* 20px de padding nas partes superior e inferior, e 10px nas laterais */
-    width: 700px;  /* Define a largura do formulário */
-    margin: auto;  /* Centraliza o formulário na tela */
+    width: 40%;  /* Define a largura 400px da caixa onde se encontra o formulário */
+    margin: auto;  /* Centraliza a caixa onde se encontra o formulário */
     position: relative; /* Define que o posicionamento do elemento será relativo à sua posição normal no fluxo do layout */
-    top: -100px; /* Move o elemento 100px para cima */
+    bottom: 150px; /* Move o  150px para cima a caixa onde se encontra o formulário*/
 
 }
 .formulario{ 
     color: rgb(0, 0, 0,0.8); /* Define uma cor rgb para tags nomeadas com essa classe*/
     margin: 10px  25px; /* Cria um espaçamento externo entre um elemento e os outros ao seu redor */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Escolha de fonte Arial  */
-}
-
-.box_cpf, .box_nome_completo, .box_email, .box_password {
-    position: relative; /* facilita a movimentação das labels */
-    bottom: 10px; /* posiciona as labels de cima para baixo */
-    margin-top: 20px; /* Adiciona uma margem no topo das labels*/
-    text-align: center; /* Alinha ao centro os labels */
-    font-size: 30px; /* Aumenta o Tamanho das Fontes */
-
-    display: flex; /* Torna a caixa um contêiner flexível */
-    flex-direction: column; /* Empilha o conteúdo verticalmente */
-    align-items: center; /* Alinha os itens no centro horizontalmente */
-}
-
-.lab_cpf, .lab_nome_completo, .lab_email{/* Texto de CPF, " nome completo" e do email */
-    margin-right: 0px; /* Define uma margem externa negativa de 140px do lado direito do elemento */
-    
+    font-family: arial; /* Escolha de fonte Arial  */
 }
 
 /*---------------------------------------------------------IDs-----------------------------------------------------------------------------*/
+#box_cpf, #box_nome_completo, #box_email, #box_password {
+    position: relative; /* facilita a movimentação das caixas de Textos */
+    bottom: 10px; /* posiciona as  caixas de Textos de cima para baixo */
+    right: 70px;  /* Move as caixas de textos para a esquerda  */
+    margin-top: 20px; /* Adiciona uma margem no topo das  caixas de Textos*/
+    text-align: center; /* Alinha ao centro os  caixas de Textos */
+    font-size: 20px; /* Aumenta o Tamanho das Fontes */
+    width: 100%; /* define largura para 300 pixels */
+    border-radius: 30px; /* Arrendonda as caixas de Textos  */
+    display: flex; /* Torna a caixa um contêiner flexível */
+    flex-direction: column; /* Empilha o conteúdo verticalmente */
+    border-style: solid; /* Defina a borda como sólida */
+    border-width: 0.1px; /* Defina a espessura muito fina */
+    
+}
+#lab_cpf, #lab_nome_completo, #lab_email,#lab_senha{/* Texto de CPF, " nome completo" e do email */
+    font-size: 20px;  /* Altera o tamanho da fonte */
+    position: relative;  /* facilita a movimentação dos textos do formulário */
+    right: 70px;  /* posiciona para esquerda os textos do formulário */
+}
 
-#txt_cadastro{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  /*Escolha de fonte Arial*/
+#lab_cadastro{  /* Altera o Texto de Cadastro */ 
+    font-family: Times;  /*Escolha de fonte Times new roman*/
     font-size: 45px; /* altera o tamnho da fonte */
     color: #003366;  /* Altera a cor da font */
+    position: relative;  /* facilita a movimentação  */
+    right: 60px;  /* posiciona para esquerda */
+    bottom: 10px; /* posiciona o texto para cima*/
 }
-#label_perfil, #buttons{
-    color:white; /* Altera as cores das fontes */
-    background: linear-gradient( to right, #003366, #40E0D0);/* Cria um fundo em degradê */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;/* Escolha de fonte Arial  */
-    font-size: 20px; /* Aumenta o tamanho da Font dos botões  */ 
+#lab_perfil{ /* Texto de "Escolha seu perfil" */
+    margin-right: 18px; /* Define uma margem externa negativa de 10px do lado direito do elemento */
+    font-size: 25px; /* altera o tamnho da fonte */
+    position: relative;  /* facilita a movimentação  */
+    right: 110px;  /* posiciona para esquerda */
+    top: 28px;  /* posiciona o texto para baixo */
 }
+#box_perfil{
+    color:rgb(250, 249, 249); /* Altera as cores das fontes */
+    background-color:#003366;/* Cria um fundo em degradê */   
+    font-family: arial;/* Escolha de fonte Arial  */
+    font-size: 15px; /* Aumenta o tamanho da Font dos botões  */ 
+    position: relative;  /* facilita a movimentação das caixas de Textos */
+    padding: 5px;  /* alonga  o botão na vertical  */
+    left: 90px;  /* Ajusta para a direita */
+    border-radius: 10px;  /* Adiciona um arredondamento  */
 
-
+}
+#button_cadastrar,#button_voltar{
+color:rgb(254, 251, 251); /* Altera as cores das fontes */
+background-color:#003366;/* Cria um fundo em degradê */
+margin: 30px; /* Adiciona 25px de espaçamento externo em todas as direções */
+width: 70%;  /* Altera a largura */
+font-family: helvetica;/* Escolha de fonte da mesma do botão de Login  */
+font-size: 20px; /* Aumenta o tamanho da Font dos botões  */ 
+position: relative;  /* facilita a movimentação  */
+right: 70px;  /* posiciona para esquerda */
+border-radius: 15px; /* Adiciona um arredondamento  */
+}
+#button_cadastrar{
+    padding: 10px; /* Altera a altura do botão */  
+   }
+#button_voltar{
+    right: 2px; /* Ajusta para a esquerda  */
+    bottom: 20px; /*  Ajusta a posição para esquerda */
+    padding: 2%;  /* alonga  o botão na vertical  */
+    
+}
 /*---------------------------------------------------------NOMES-----------------------------------------------------------------------------*/
 
 fieldset{         /* Altera o Quadrado onde se encontra o Formulário */
-    font-size: 30px; /* Aumenta o tamanho da Font dos cabeçalhos */
-    text-align: center; /* Centraliza do contéudo para o centro */
-    margin: 0px; /* Altera o Quadrado onde se encontra o Formulário*/
-    border: none; /* retira toda as bordas dos cabeçalhos */
-    position: relative; /* facilita a movimentação do formulário */
-    left: 120px; /* Movimenta o Formulário da direit para a esquerda */
+    text-align: center;  /* Centraliza do contéudo para o centro */
+    border: none;  /* retira toda as bordas dos cabeçalhos */
+    position: relative;  /* facilita a movimentação do formulário */
+    left: 120px;  /* Movimenta o Formulário da direit para a esquerda */
 }
 img {
-    width: 130px; /* Largura */
-    height: 140.5px; /* Altura */
-    position: relative; /* Permite deslocar a imagem em relação à sua posição original */
-    top: -67px; /* altura da posição da imagem */
-    right: 50px; /* posição horizontal direita da imagem */ 
+    width: 130px;   /* Largura */
+    height: 145.5px; /* Altura */
+    position: relative;  /* Permite deslocar a imagem em relação à sua posição original */
+    bottom: 40px;   /* altura da posição da imagem */
+    left: 30px;   /* posição horizontal direita da imagem */ 
 }
-body{
-   
-    background: linear-gradient(#003366, #40E0D0);/* Cria um fundo em degradê */
-    padding: 20px; /* Cria um espaço interno de 20px dentro do elemento */
-    margin: 48.5px; /* Adiciona espaçamento externo */
+body{   /* Altera toda a pagina */
+    background: linear-gradient(#003366, #40E0D0);  /* Cria um fundo em degradê */
+    margin: 40.5px;  /* Adiciona espaçamento externo */
 }
