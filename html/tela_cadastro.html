@@ -1,63 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br"> <!-- Define que o documento HTML é em português do Brasil -->
+<html lang="pt-br"> <!-- Define que o documento segue os padrões do HTML5 e está em português do Brasil, importante para acessibilidade e SEO. -->
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante que o layout seja responsivo -->
-    <link rel="stylesheet" href="../css/tela_cadastro.css"> <!-- Link para o arquivo CSS externo -->
-    
-    <title>Tela de cadastro</title> <!-- Título da página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, o que permite o uso de caracteres especiais, como acentos e cedilha. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Configura a página para ser responsiva, ajustando o layout automaticamente em dispositivos com diferentes tamanhos de tela (muito útil em smartphones e tablets). -->
+    <link rel="stylesheet" href="../css/tela_cadastro.css"> 
+    <!-- Vincula um arquivo CSS externo responsável por estilizar a página. Certifique-se de que o caminho está correto e padronize as barras como `/` para evitar problemas em servidores Linux. -->
+
+    <title>Tela de cadastro</title> <!-- Define o título exibido na aba do navegador, importante para UX (experiência do usuário) e SEO. -->
 </head>
 <body>
     <!-- Logotipo -->
-    <img src="../Img/Logo(CB).png" alt="Logo do trabalho"> <!-- Adiciona a imagem do logotipo, com texto alternativo "Logo de Trab" -->
+    <img src="../Img/Logo(CB).png" alt="Logo do trabalho"> 
+    <!-- Adiciona o logotipo da página. O atributo `alt` fornece um texto alternativo, importante para acessibilidade e para o caso de a imagem não carregar. -->
 
     <!-- Caixa principal que contém o formulário -->
-    <div class="box">
+    <div class="box"> <!-- Um container usado para envolver o formulário, estilizado por meio de uma classe. -->
         <!-- Formulário de cadastro -->
-        <form class="formulario" method="post" action="../php/tela_cadastro_perfil.php" onsubmit="return validarFormularioCadastro()"> <!-- Chama a função JavaScript -->
-            <fieldset>
-                <b id="lab_cadastro">Cadastro</b> <!-- Título do formulário -->
+        <form class="formulario" method="post" action="../php/tela_cadastro_perfil.php" onsubmit="return validarFormularioCadastro()"> 
+        <!-- `method="post"`: Os dados do formulário serão enviados de forma segura para o backend.
+             `action="../php/tela_cadastro_perfil.php"`: Define o destino do processamento dos dados.
+             `onsubmit="return validarFormularioCadastro()"`: Chama a função JavaScript que valida os dados antes de enviar o formulário. -->
+
+            <fieldset> <!-- Agrupa visualmente os campos do formulário e cria uma separação lógica. -->
+                <b id="lab_cadastro">Cadastro</b> <!-- Título do formulário, destacado por meio de um `id` para estilização. -->
                 <br>
+
                 <!-- Campo para CPF -->
                 <div>
-                    <label id="lab_cpf" for="cpf"><b>CPF:</b></label>
-                    <input id="box_cpf" type="text" name="cpf" class="inputUser" placeholder="Digite seu CPF">
+                    <label id="lab_cpf" for="cpf"><b>CPF:</b></label> <!-- Rótulo para o campo CPF, vinculado ao `id` do campo com o atributo `for`. -->
+                    <input id="box_cpf" type="text" name="cpf" class="inputUser" placeholder="Digite seu CPF"> 
+                    <!-- `id="box_cpf"`: Permite estilização e manipulação por CSS e JavaScript.
+                         `type="text"`: Aceita qualquer texto (mas pode ser validado com JavaScript).
+                         `placeholder`: Texto de orientação exibido dentro do campo até que o usuário digite. -->
                 </div>
                 
                 <!-- Campo para nome completo -->
                 <div>
-                    <label id="lab_nome_completo" for="nome"><b>Nome Completo:</b></label> <!-- Etiqueta para o campo "nome" -->
+                    <label id="lab_nome_completo" for="nome"><b>Nome Completo:</b></label> <!-- Rótulo informativo para o nome. -->
                     <input id="box_nome_completo" type="text" name="nome" class="inputUser" placeholder="Digite o nome completo">
                 </div>
 
                 <!-- Campo para e-mail -->
                 <div>
-                    <label id="lab_email" for="email"><b>E-mail:</b></label> <!-- Etiqueta para o campo "e-mail" -->
+                    <label id="lab_email" for="email"><b>E-mail:</b></label> <!-- Rótulo para o campo de e-mail. -->
                     <input id="box_email" type="text" name="email" class="inputUser" placeholder="Digite seu email">
+                    <!-- Use `type="email"` para validação automática no navegador. -->
                 </div>
 
                 <!-- Campo para senha -->
                 <div>
-                    <label id="lab_senha" for="senha"><b>Senha:</b></label> <!-- Etiqueta para o campo "senha" -->
+                    <label id="lab_senha" for="senha"><b>Senha:</b></label>
                     <input id="box_password" type="password" name="senha" class="inputUser" placeholder="Digite sua senha">
+                    <!-- `type="password"`: Oculta os caracteres digitados para segurança. -->
                 </div>
 
                 <!-- Seletor de perfil -->
                 <div>
                     <label id="lab_perfil" for="perfil"><b>Selecione seu Perfil:</b></label>   
                     <select id="box_perfil" name="perfil">
-                        <option value="" disabled selected>Escolha o perfil</option> <!-- Placeholder inicial -->
-                        <option value="Aluno">Aluno</option> <!-- Valor correto para aluno -->
-                        <option value="Professor">Professor</option> <!-- Valor correto para professor -->
+                        <!-- `select`: Permite ao usuário escolher entre opções predefinidas. -->
+                        <option value="" disabled selected>Escolha o perfil</option> 
+                        <!-- Placeholder inicial que não pode ser selecionado como opção válida. -->
+                        <option value="Aluno">Aluno</option> <!-- Perfis predefinidos. -->
+                        <option value="Professor">Professor</option>
                     </select>
                 </div>
+
                 <!-- Botão de cadastro -->
-                <button type="submit" id="button_cadastrar">Cadastrar</button> <!-- Link para a tela de login após o cadastro -->
+                <button type="submit" id="button_cadastrar">Cadastrar</button> 
+                <!-- Botão que envia o formulário ao ser clicado, caso todas as validações tenham sido aprovadas. -->
             </fieldset>    
         </form>
-        <a href="tela_inicial.html"><button id="button_voltar">Voltar</button></a> <!-- Link para a tela de inicio caso queira voltar --> 
+
+        <!-- Botão para voltar à tela inicial -->
+        <a href="tela_inicial.html">
+          <button id="button_voltar">Voltar</button> 
+          <!-- O botão "Voltar" permite retornar à página inicial, facilitando a navegação para o usuário. -->
+        </a>
     </div>
+
     <!-- JavaScript externo -->
     <script src="../js/validacao_cadastro.js"></script>
+    <!-- Vincula um arquivo JavaScript externo que adiciona funcionalidades, como validações no formulário antes do envio. -->
 </body>
 </html>

@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br"> <!-- Define que o documento HTML está em português do Brasil -->
+<html lang="pt-br"> <!-- Define que o documento está em português do Brasil, fundamental para SEO e acessibilidade. -->
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação dos caracteres para UTF-8, suportando caracteres especiais -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o layout responsivo -->
-    <link rel="stylesheet" href = "..\css\tela_inicial.css">
-    <title>Tela inicial</title> <!-- Define o título da página visível na aba do navegador -->
-   
+    <meta charset="UTF-8"> <!-- Define a codificação como UTF-8, permitindo o uso de caracteres especiais (acentos, cedilha, etc.). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define o layout responsivo para dispositivos móveis e diferentes tamanhos de tela. -->
+    <link rel="stylesheet" href="../css/tela_inicial.css"> <!-- Linka um arquivo CSS externo para estilização da página. Atenção para as barras invertidas (\), que podem ser problemáticas em servidores Linux; substitua por barras normais (/). -->
+    <title>Tela inicial</title> <!-- Define o título da página, que aparece na aba do navegador. -->
 </head>
 <body> 
     <!-- Caixa de pesquisa -->
-    <div>
+    <div> <!-- Container principal da página. -->
         <!-- Campo de entrada de texto para buscar informações -->
-        <input id="box_search" type="text" name="" placeholder="Buscar por Disciplina, concurso ou provas">
-        <!-- Botão de pesquisa que, neste caso, não tem funcionalidade definida -->
-        <a   href="#"></a> 
-          <i></i> <!-- Ícone de pesquisa, provavelmente requer a biblioteca Font Awesome -->
-          
-          <!-- Botão para acessar informações "Sobre nós" -->
-          <button id = "botton_sobre">Sobre nós</button>
-          
+        <input id="box_search" type="text" name="" placeholder="Buscar por Disciplina, concurso ou provas"> 
+        <!-- Campo de texto para buscas, com um placeholder para orientar o usuário. O atributo "name" está vazio e deve ser preenchido caso o campo precise ser enviado para o backend. -->
+        
+        <!-- Botão de pesquisa -->
+        <a href="#"></a> 
+        <!-- Este botão está vazio e sem funcionalidade definida no momento. Ele poderia ser complementado para realizar uma busca ou redirecionar. -->
+        <i></i> <!-- Provavelmente para exibir um ícone (como uma lupa). Certifique-se de que o CSS ou a biblioteca Font Awesome esteja configurada. -->
+        
+        <!-- Botão para acessar informações "Sobre nós" -->
+        <button id="botton_sobre">Sobre nós</button> <!-- Um botão separado com ID exclusivo, que pode abrir uma página ou mostrar um modal com informações. -->
+
         <!-- Título principal da página -->
         <h1 id="texto_convidativo">Seu sucesso começa aqui: prepare-se
-            como nunca e conquiste sua vaga!</h1>
-            <br><br>
+            como nunca e conquiste sua vaga!</h1> 
+        <!-- O título da página, posicionado para motivar e chamar a atenção do visitante. -->
+        <br><br>
             
         <!-- Link para a tela de cadastro -->
         <a href="tela_cadastro.html">
-          <button id="botton_comecar">Começar</button> <!-- Botão para iniciar o processo de cadastro -->
+          <button id="botton_comecar">Começar</button> <!-- Botão chamativo para redirecionar o usuário para o cadastro. -->
         </a>
     </div>
 
     <!-- Rodapé da página -->
-    <div id="footer">
-      <p>
-          <!-- Links importantes para o usuário -->
-          <a href="#">Termos de Uso</a>  | <!-- Termos de uso -->
-          <a href="#">Contatos</a>  | <!-- Link que permite ligar para o número fornecido -->
-          <a href="#">Redes Sociais</a> <!-- Link que redireciona para redes sociais -->
+    <div id="footer"> <!-- Container exclusivo do rodapé, identificado pelo ID. -->
+      <p> <!-- Conteúdo principal do rodapé. -->
+          <!-- Links úteis para o usuário -->
+          <a href="#">Termos de Uso</a>  | <!-- Link para os termos de uso da plataforma (necessário definir o endereço futuro). -->
+          <a href="#">Contatos</a>  | <!-- Link para a página de contato (não funcional no momento). -->
+          <a href="#">Redes Sociais</a> <!-- Link para as redes sociais da empresa (pode redirecionar para perfis reais ou placeholders). -->
           
-          <!-- Direitos reservados com ano e marca da empresa -->
-          <h4>©2025 ConcursBank. Todos os direitos reservados.</h4>
+          <!-- Informação sobre direitos autorais -->
+          <h4>©2025 ConcursBank. Todos os direitos reservados.</h4> 
+          <!-- A menção ao ano é uma boa prática. Pode ser atualizado automaticamente com PHP ou JavaScript. -->
       </p>
     </div>
 </body>

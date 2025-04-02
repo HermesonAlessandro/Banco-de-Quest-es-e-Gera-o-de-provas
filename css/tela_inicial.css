@@ -1,51 +1,52 @@
 /*---------------------------------------------------------NOMES-----------------------------------------------------------------------------*/
 
-body{     /*Altera todo o coteudo da pág */
-    background: linear-gradient( to right, #003366, #40E0D0);/* Cria um fundo em degradê */
-    
+body{     /* Altera todo o conteúdo da página */
+    background: linear-gradient(to right, #003366, #40E0D0); /* Cria um fundo em degradê que vai da esquerda para a direita, com cores azul-escuro (#003366) e turquesa (#40E0D0). */
 }
+
 /*---------------------------------------------------------IDs-----------------------------------------------------------------------------*/
-#botton_sobre{   /* Fazer as alterações no botão de "sobre Nos" */
-    position: relative;  /* Facilita a movimentação do objeto */
-    left: 1030px; /* Move o objeto da esquerda para a direita */
-    width: 100px;  /* Altera a Largura do botão */ 
-    padding: 10px;/* Altera a altura do botão*/
-    color: white;  /* Altera a cor do texto do botão  */
-    background-color: rgba(0, 0, 0, 0.334);  /*  Altera a cor do funndo do botão */
+
+#botton_sobre{   /* Faz alterações específicas no botão "Sobre Nós". */
+    position: relative;  /* Permite ajustar a posição do botão em relação ao seu container original. */
+    left: 1030px; /* Move o botão horizontalmente para a direita, com base no posicionamento relativo. */
+    width: 100px;  /* Define a largura do botão como 100px. */
+    padding: 10px; /* Define o espaço interno do botão, aumentando a altura por meio de preenchimento interno. */
+    color: white;  /* Altera a cor do texto dentro do botão para branco. */
+    background-color: rgba(0, 0, 0, 0.334);  /* Define a cor de fundo do botão com um tom preto semi-transparente. */
 }
-#box_search
-{
-    position: relative;  /* Facilita a movimentação do objeto da caixa de pesquisa */  
-    left: 550px;      /* Move o objeto da esquerda para a direita da caixa de pesquisa */
-    width: 255px;    /* Altera a Largura da caixa de pesquisa */ 
-    padding: 10px;     /* Altera a altura da caixa de pesquisa */
-    margin-right: -80px; /* altera a margem que faz o " sobre nos" ficar mais perto da caixa de pesquisa */
-    border: 2px solid black;   /* adiciona uma borda preta na caixa de pesquisa */
-    border-radius: 30px;    /* Areedonda essa borda em 30px */
+
+#box_search{ /* Faz alterações na caixa de pesquisa. */
+    position: relative;  /* Permite ajustar sua posição em relação ao seu container original. */
+    left: 550px; /* Move a caixa de pesquisa horizontalmente para a direita. */
+    width: 255px; /* Define a largura da caixa de pesquisa como 255px. */
+    padding: 10px; /* Ajusta o espaço interno para aumentar a altura. */
+    margin-right: -80px; /* Define uma margem negativa para aproximar o botão "Sobre Nós" da caixa de pesquisa. */
+    border: 2px solid black; /* Adiciona uma borda sólida preta com 2px de espessura. */
+    border-radius: 30px; /* Arredonda os cantos da borda da caixa de pesquisa em 30px, criando um efeito estético. */
 }
-#footer
-{
-position: relative;
-top: 390px;
-text-align: center;
-color: rgb(0,0,0);
-text-decoration: none;
+
+#footer{ /* Faz alterações no rodapé da página. */
+    position: relative; /* Define a posição como relativa para facilitar o ajuste do rodapé. */
+    top: 390px; /* Move o rodapé verticalmente para baixo. */
+    text-align: center; /* Centraliza o texto dentro do rodapé. */
+    color: rgb(0,0,0); /* Define a cor do texto do rodapé como preto (rgb). */
+    text-decoration: none; /* Remove qualquer sublinhado do texto ou links no rodapé. */
 }
-#botton_comecar
-{
-    color: white;
-    width: 10%;
-    padding: 0.1%;
-    background-color:#003366;/* Cria um fundo em degradê */
-    position: relative;
-    left: 600px;
-    
+
+#botton_comecar{ /* Estiliza o botão "Começar". */
+    color: white; /* Altera a cor do texto dentro do botão para branco. */
+    width: 10%; /* Define a largura do botão como 10% do tamanho do container. */
+    padding: 0.1%; /* Adiciona preenchimento interno ao botão para melhorar o visual. */
+    background-color: #003366; /* Define a cor de fundo como azul-escuro (#003366). */
+    position: relative; /* Define a posição como relativa para facilitar o ajuste do botão. */
+    left: 600px; /* Move o botão horizontalmente para a direita. */
 }
-#texto_convidativo{
-    text-align: center;
-    color: aliceblue;
-    
+
+#texto_convidativo{ /* Faz alterações no texto principal da página. */
+    text-align: center; /* Centraliza o texto na página. */
+    color: aliceblue; /* Define a cor do texto como "aliceblue", um tom de azul claro. */
 }
 
 /*---------------------------------------------------------CLASS-----------------------------------------------------------------------------*/
 
+/* Neste código, não há classes definidas diretamente. No caso de classes adicionais, elas podem ser usadas para estilizar elementos que compartilhem características semelhantes. */

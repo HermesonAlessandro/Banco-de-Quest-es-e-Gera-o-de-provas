@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br"> <!-- Define que o documento está em português do Brasil -->
+<html lang="pt-br"> <!-- Define que o documento segue o padrão HTML5 e está em português do Brasil -->
 <head>
     <!-- Link para o CSS externo que estiliza a página -->
     <link rel="stylesheet" type="text/css" href="../css/tela_login.css" media="screen" />
-    
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o layout responsivo em dispositivos móveis -->
-    <title>Tela de login</title> <!-- Título exibido na aba do navegador -->
+    <!-- O atributo "media" indica que este CSS é aplicado em telas ("screen"). -->
+
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, essencial para suportar caracteres especiais (acentos, cedilha, etc.). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva em dispositivos móveis. -->
+    <title>Tela de login</title> <!-- Define o texto exibido na aba do navegador como "Tela de login". -->
 </head>
-<body id="corpo_do_site"> <!-- Atributo "id" usado para estilizar o corpo da página -->
+<body id="corpo_do_site"> <!-- Define o corpo da página e atribui um "id" específico para aplicar estilos personalizados no CSS. -->
 
     <!-- Logotipo da página -->
-    <img src="../Img/Logo(CB).png" alt="Logo do trabalho"> <!-- Adiciona a imagem do logotipo e usa texto alternativo caso a imagem não seja carregada -->
-    
-    <!-- Div principal que engloba o formulário -->
-    <div class="formulario">
-        <h1 id = "txt_login">Login</h1> <!-- Cabeçalho principal da página -->
+    <img src="../Img/Logo(CB).png" alt="Logo do trabalho"> <!-- Adiciona o logotipo. O texto alternativo "alt" é exibido caso a imagem não seja carregada. -->
 
-        <!-- Formulário -->
-        <form action="#" method="post"> <!-- Define o formulário que utiliza o método POST -->
+    <!-- Div principal que engloba o formulário de login -->
+    <div class="formulario">
+        <h1 id="txt_login">Login</h1> <!-- Adiciona um cabeçalho principal com o texto "Login". O "id" pode ser usado para estilização específica no CSS. -->
+
+        <!-- Início do formulário -->
+        <form action="#" method="post"> <!-- O atributo "action" determina o local para onde os dados do formulário serão enviados. No momento, está com "#" (nenhum destino). -->
             <!-- Campo de entrada de e-mail -->
             <div class="email">
-                <h3>E-mail:</h3> <!-- Subtítulo do campo de e-mail -->
-                <input id="box_email" type="email" placeholder="Digite seu E-mail" required> <!-- Campo de entrada para o e-mail, com validação obrigatória -->
+                <h3>E-mail:</h3> <!-- Subtítulo do campo de entrada de e-mail. -->
+                <input id="box_email" type="email" placeholder="Digite seu E-mail" required> 
+                <!-- Cria o campo de entrada para e-mail:
+                     - "id" permite manipulação via CSS ou JavaScript.
+                     - "type=email" assegura validação básica para formato de e-mail.
+                     - "placeholder" fornece um texto de exemplo no campo.
+                     - "required" exige que o campo seja preenchido antes do envio. -->
             </div>
             
             <!-- Campo de entrada de senha -->
             <div class="senha">
-                <h3>Senha:</h3> <!-- Subtítulo do campo de senha -->
-                <input id="box_senha" type="password" placeholder="Digite sua Senha" required> <!-- Campo de entrada para a senha, com validação obrigatória -->
+                <h3>Senha:</h3> <!-- Subtítulo do campo de entrada de senha. -->
+                <input id="box_senha" type="password" placeholder="Digite sua Senha" required>
+                <!-- Cria o campo de entrada para senha:
+                     - "type=password" esconde o texto digitado.
+                     - "placeholder" exibe um exemplo no campo até que o usuário comece a digitar.
+                     - "required" torna o preenchimento obrigatório. -->
             </div>
 
-            <!-- Botão para enviar o formulário -->
-            <button type="submit">Entrar</button> <!-- Botão "Entrar" -->
-            <button type="submit">Voltar</button> <!-- Botão "Voltar" -->
+            <!-- Botões do formulário -->
+            <button type="submit">Entrar</button> <!-- Botão para enviar os dados do formulário. -->
+            <button type="submit">Voltar</button> <!-- Botão adicional com função indefinida no momento, mas pode ser utilizado para navegação. -->
         </form>
         
-        <!-- Links adicionais abaixo do formulário -->
+        <!-- Links adicionais -->
         <div class="links">
-            <!-- Link para redefinir a senha -->
-            <a  href="#">Esqueceu a senha?</a>
+            <!-- Link para recuperação de senha -->
+            <a href="#">Esqueceu a senha?</a>
             <br>
             <!-- Link para a página de cadastro -->
-            <a  href="#">Não tem uma conta? Cadastre-se</a>
+            <a href="#">Não tem uma conta? Cadastre-se</a>
+            <!-- Ambos os links atualmente apontam para "#" (nenhum destino), mas podem ser atualizados para direcionar às páginas corretas. -->
         </div>
     </div>
 
-    <!-- Script externo para adicionar funcionalidades (JavaScript) -->
+    <!-- Importação de script externo -->
     <script src="../js/script.js"></script>
+    <!-- O arquivo externo "script.js" é incluído para adicionar funcionalidades interativas ou validações ao formulário. -->
 </body>
 </html>
