@@ -14,42 +14,38 @@
     <!-- Caixa principal que contém o formulário -->
     <div class="box">
         <!-- Formulário de cadastro -->
-        <form class="formulario" method="post" action="../php/telacad_cadastrar.php"> <!-- Essa parte diz o nome do formulário, a forma que vai aparecer na url logo acima da página, apontamento para o php-->
+        <form class="formulario" method="post" action="../php/tela_cadastro_perfil.php" onsubmit="return validarFormularioCadastro()"> <!-- Chama a função JavaScript -->
             <fieldset>
-                <b id = "lab_cadastro">Cadastro</b> <!-- Título do formulário -->
+                <b id="lab_cadastro">Cadastro</b> <!-- Título do formulário -->
                 <br>
-                <!-- Campo para cpf -->
-                <div >
+                <!-- Campo para CPF -->
+                <div>
                     <label id="lab_cpf" for="cpf"><b>CPF:</b></label>
-                    <input id="box_cpf" type="text" name="cpf" id="cpf" class="inputUser" required
-                    placeholder="Digite seu CPF" pattern="\d{11}" title="Digite exatamente 11 números para o CPF">
+                    <input id="box_cpf" type="text" name="cpf" class="inputUser" placeholder="Digite seu CPF">
                 </div>
                 
                 <!-- Campo para nome completo -->
                 <div>
-                    <label id="lab_nome_completo" for="nome"><b> Nome Completo:</b></label> <!-- Etiqueta para o campo "nome" -->
-                    <input id="box_nome_completo" type="text" name="nome" id="nome" class="inputUser" required
-                    placeholder="Digite o nome completo"> <!-- Campo de texto obrigatório com placeholder -->
+                    <label id="lab_nome_completo" for="nome"><b>Nome Completo:</b></label> <!-- Etiqueta para o campo "nome" -->
+                    <input id="box_nome_completo" type="text" name="nome" class="inputUser" placeholder="Digite o nome completo">
                 </div>
 
                 <!-- Campo para e-mail -->
                 <div>
-                    <label id= "lab_email" for="nome"><b>E-mail:</b></label> <!-- Etiqueta para o campo "e-mail" -->
-                    <input id="box_email" type="text" name="email" id="email" class="inputUser" required
-                    placeholder="Digite seu email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" title="Insira um endereço de e-mail válido. Exemplo: usuario@dominio.com"> <!-- Campo de entrada de e-mail obrigatório -->
+                    <label id="lab_email" for="email"><b>E-mail:</b></label> <!-- Etiqueta para o campo "e-mail" -->
+                    <input id="box_email" type="text" name="email" class="inputUser" placeholder="Digite seu email">
                 </div>
 
                 <!-- Campo para senha -->
                 <div>
-                    <label id="lab_senha"for="nome"><b>Senha:</b></label> <!-- Etiqueta para o campo "senha" -->
-                    <input id="box_password" type="password" name="senha" id="senha" class="inputUser" required
-                    placeholder="Digite sua senha"> <!-- Campo de entrada de senha obrigatório -->
+                    <label id="lab_senha" for="senha"><b>Senha:</b></label> <!-- Etiqueta para o campo "senha" -->
+                    <input id="box_password" type="password" name="senha" class="inputUser" placeholder="Digite sua senha">
                 </div>
 
                 <!-- Seletor de perfil -->
                 <div>
                     <label id="lab_perfil" for="perfil"><b>Selecione seu Perfil:</b></label>   
-                    <select id ="box_perfil" name="perfil" id="perfil" required>   
+                    <select id="box_perfil" name="perfil">
                         <option value="" disabled selected>Escolha o perfil</option> <!-- Placeholder inicial -->
                         <option value="Aluno">Aluno</option> <!-- Valor correto para aluno -->
                         <option value="Professor">Professor</option> <!-- Valor correto para professor -->
@@ -61,5 +57,7 @@
         </form>
         <a href="tela_inicial.html"><button id="button_voltar">Voltar</button></a> <!-- Link para a tela de inicio caso queira voltar --> 
     </div>
+    <!-- JavaScript externo -->
+    <script src="../js/validacao_cadastro.js"></script>
 </body>
 </html>
