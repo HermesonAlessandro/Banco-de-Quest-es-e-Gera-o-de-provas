@@ -1,0 +1,61 @@
+#body-resetar {
+    background: linear-gradient(#003366, #40E0D0); /* Cria um fundo com degradê que vai de azul escuro (#003366) para turquesa (#40E0D0). */
+    text-align: center; /* Centraliza o texto e os elementos dentro do corpo da página. */
+    font-family: Arial, sans-serif; /* Define a fonte como Arial ou, se indisponível, outra sans-serif. */
+    padding: 20px; /* Adiciona espaçamento interno ao corpo da página. */
+}
+
+.box-resetar {
+    background: linear-gradient(to right, #E1E1FF, #E0DEFF); /* Fundo da caixa com degradê que vai de um tom claro de azul (#E1E1FF) para lilás claro (#E0DEFF). */
+    border-radius: 30px; /* Arredonda os cantos da caixa para deixá-la visualmente mais agradável. */
+    width: 400px; /* Define a largura fixa da caixa para manter a consistência. */
+    padding: 20px; /* Adiciona espaçamento interno ao redor do conteúdo dentro da caixa. */
+    margin: auto; /* Centraliza a caixa horizontalmente na página. */
+    position: relative; /* Permite posicionar a caixa em relação à sua posição normal no layout. */
+    top: 0px; /* Ajusta a posição vertical da caixa (você pode mudar para movê-la para cima ou para baixo). */
+}
+
+img {
+    width: 130px; /* Define a largura fixa da imagem (logotipo). */
+    height: 145px; /* Define a altura fixa da imagem. */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo da imagem para separar visualmente os elementos. */
+}
+
+#titulo-resetar {
+    font-size: 28px; /* Define o tamanho da fonte do título para torná-lo mais destacado. */
+    color: #003366; /* Define a cor do texto do título como azul escuro (#003366). */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título para separar os elementos. */
+}
+
+.label-resetar {
+    font-size: 18px; /* Define o tamanho da fonte para os rótulos associados aos campos de entrada. */
+    color: #000; /* Define a cor preta para o texto dos rótulos. */
+    margin-bottom: 10px; /* Adiciona um pequeno espaço abaixo dos rótulos. */
+}
+
+input {
+    width: 90%; /* Faz com que o campo de entrada ocupe 90% da largura do container pai. */
+    padding: 10px; /* Adiciona espaçamento interno ao redor do texto dentro do campo. */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo de cada campo para separar os elementos visualmente. */
+    border: 1px solid #003366; /* Define uma borda sólida de 1px com cor azul escuro (#003366). */
+    border-radius: 20px; /* Arredonda os cantos dos campos de entrada. */
+}
+
+#button-resetar {
+    background-color: #003366; /* Define a cor de fundo do botão como azul escuro (#003366). */
+    color: white; /* Define a cor do texto no botão como branca. */
+    padding: 10px; /* Adiciona espaçamento interno ao redor do texto no botão. */
+    width: 90%; /* Faz o botão ocupar 90% da largura do container pai. */
+    border-radius: 20px; /* Arredonda as bordas do botão. */
+    font-size: 16px; /* Define o tamanho da fonte do texto dentro do botão. */
+    cursor: pointer; /* Faz o cursor mudar para "mãozinha" ao passar sobre o botão, indicando que ele é clicável. */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos ao alterar a cor de fundo do botão. */
+}
+
+#voltar-resetar {
+    display: block; /* Faz o link "Voltar para o Login" aparecer em uma linha separada. */
+    color: #003366; /* Define a cor do texto do link como azul escuro (#003366). */
+    font-size: 14px; /* Define o tamanho da fonte do texto do link. */
+    margin-top: 47.5px; /* Adiciona espaço acima do link para separá-lo do restante do conteúdo. */
+    text-decoration: none; /* Remove o sublinhado do texto do link. */
+}

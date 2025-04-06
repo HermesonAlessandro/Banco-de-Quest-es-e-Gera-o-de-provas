@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define que o documento segue o padrão HTML5 e está em português do Brasil -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de reset de senha</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, essencial para suportar caracteres especiais (acentos, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a página para ser responsiva em dispositivos móveis -->
+    <link rel="stylesheet" href="../css/tela_resetar_senha.css"> <!-- Vincula um arquivo CSS externo para estilizar a página -->
+    <title>Tela de reset de senha</title> <!-- Define o texto exibido na aba do navegador -->
 </head>
-<body>
-    
+<body id="body-resetar"> <!-- Define o corpo da página com um ID para aplicar estilos personalizados via CSS -->
+    <div class="box-resetar"> <!-- Div principal que engloba o conteúdo central da página -->
+        <img src="../Img/Logo(CB).png" alt="Logo do trabalho"> <!-- Adiciona o logotipo. O atributo "alt" fornece texto alternativo para acessibilidade -->
+        <h1 id="titulo-resetar">Redefinir Senha</h1> <!-- Título principal da página -->
+        
+        <!-- Início do formulário de redefinição de senha -->
+        <form method="post" action="../php/resetar_senha.php" class="formulario-resetar">
+            <!-- Campo para exibir o e-mail do usuário -->
+            <label for="email" class="label-resetar">E-mail:</label> <!-- Rótulo para o campo de e-mail -->
+            <input type="email" id="email" name="email" value="usuario@exemplo.com" readonly> 
+            <!-- Campo de entrada de e-mail:
+                 - "readonly" impede a edição do campo, pois o e-mail já foi carregado automaticamente -->
+                 
+            <!-- Campo para definir a nova senha -->
+            <label for="nova_senha" class="label-resetar">Nova Senha:</label> <!-- Rótulo para o campo de nova senha -->
+            <input type="password" id="nova_senha" name="nova_senha" placeholder="Digite a nova senha" required> 
+            <!-- Campo de entrada de senha:
+                 - "type=password" oculta o texto digitado.
+                 - "placeholder" exibe uma instrução no campo até que o usuário digite.
+                 - "required" exige que o campo seja preenchido. -->
+
+            <!-- Campo para confirmar a nova senha -->
+            <label for="confirmar_senha" class="label-resetar">Confirme a Nova Senha:</label> <!-- Rótulo para o campo de confirmação da senha -->
+            <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme a nova senha" required> 
+            <!-- Funciona de forma semelhante ao campo anterior, mas serve para confirmar a senha digitada -->
+
+            <!-- Botão para enviar o formulário -->
+            <button type="submit" id="button-resetar">Redefinir Senha</button> <!-- Botão para enviar as informações ao backend -->
+        </form>
+        
+        <!-- Link para voltar à tela de login -->
+        <a href="tela_login.html" id="voltar-resetar">Voltar para o Login</a> 
+        <!-- Link simples que redireciona o usuário à tela de login -->
+    </div>
 </body>
 </html>
