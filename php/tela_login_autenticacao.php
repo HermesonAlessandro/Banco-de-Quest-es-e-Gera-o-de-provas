@@ -17,20 +17,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Garante que o código só será e
         die("Erro: Todos os campos devem estar preenchidos!"); // Exibe mensagem de erro se algum campo estiver vazio.
     }
 
-    // Consulta para buscar o usuário na tabela alunos com base no email
-    $sql = "SELECT cpf, nome_completo, email, senha, tipo_de_perfil FROM aluno WHERE email = ?"; // Consulta para verificar se o email existe na tabela.
-    $stmt = $mysqli->prepare($sql); // Prepara a consulta para evitar SQL Injection.
-    $stmt->bind_param("s", $email); // Vincula o valor do email à consulta preparada.
-    $stmt->execute(); // Executa a consulta.
-    $resultado = $stmt->get_result(); // Obtém o resultado da consulta.
+    // Consulta para buscar o usuário na tabela alunos
+    $sql_aluno = "SELECT cpf, nome_completo, email, senha, 'aluno' AS tipo_de_perfil FROM aluno WHERE email = ?";
+    $stmt_aluno = $mysqli->prepare($sql_aluno);
+    $stmt_aluno->bind_param("s", $email);
+    $stmt_aluno->execute();
+    $resultado_aluno = $stmt_aluno->get_result();
 
-    // Verifica se o usuário foi encontrado
-    if ($resultado->num_rows > 0) { // Verifica se há algum resultado correspondente ao email fornecido.
-        $usuario = $resultado->fetch_assoc(); // Captura os dados do usuário.
+    if ($resultado_aluno->num_rows > 0) { // Se o usuário for encontrado na tabela aluno
+        $usuario = $resultado_aluno->fetch_assoc(); // Captura os dados do usuário
 
-        // Verifica se a senha fornecida corresponde ao hash armazenado
-        if (password_verify($senha, $usuario["senha"])) { // Compara a senha fornecida com o hash armazenado.
-            // Caso a autenticação seja bem-sucedida, salva os dados do usuário na sessão
+        if (password_verify($senha, $usuario["senha"])) { // Compara a senha fornecida com o hash armazenado
             $_SESSION["usuario"] = [
                 "cpf" => $usuario["cpf"],
                 "nome_completo" => $usuario["nome_completo"],
@@ -38,17 +35,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Garante que o código só será e
                 "perfil" => $usuario["tipo_de_perfil"]
             ];
 
-            // Redireciona o usuário para a área protegida
-            header("Location: ../html/tela_inicial_aluno.html"); // Redireciona para a área protegida.
-            exit(); // Garante que o script pare de executar após o redirecionamento.
+            // Redireciona para a tela inicial do aluno
+            header("Location: ../html/tela_inicial_aluno.html");
+            exit();
         } else {
-            echo "Erro: Senha incorreta!"; // Exibe mensagem de erro caso a senha não corresponda ao hash.
+            die("Erro: Senha incorreta!"); // Exibe erro se a senha não corresponder
         }
-    } else {
-        echo "Erro: E-mail não cadastrado!"; // Exibe mensagem de erro caso o email não seja encontrado.
     }
 
-    // Fecha o statement para liberar recursos
-    $stmt->close(); // Fecha o statement usado para a consulta.
+    // Consulta para buscar o usuário na tabela professores
+    $sql_professor = "SELECT cpf, nome_completo, email, senha, 'professor' AS tipo_de_perfil FROM professor WHERE email = ?";
+    $stmt_professor = $mysqli->prepare($sql_professor);
+    $stmt_professor->bind_param("s", $email);
+    $stmt_professor->execute();
+    $resultado_professor = $stmt_professor->get_result();
+
+    if ($resultado_professor->num_rows > 0) { // Se o usuário for encontrado na tabela professor
+        $usuario = $resultado_professor->fetch_assoc(); // Captura os dados do usuário
+
+        if (password_verify($senha, $usuario["senha"])) { // Compara a senha fornecida com o hash armazenado
+            $_SESSION["usuario"] = [
+                "cpf" => $usuario["cpf"],
+                "nome_completo" => $usuario["nome_completo"],
+                "email" => $usuario["email"],
+                "perfil" => $usuario["tipo_de_perfil"]
+            ];
+
+            // Redireciona para a tela inicial do professor
+            header("Location: ../html/tela_inicial_professor.html");
+            exit();
+        } else {
+            die("Erro: Senha incorreta!"); // Exibe erro se a senha não corresponder
+        }
+    }
+
+    // Se o email não for encontrado em nenhuma tabela
+    die("Erro: E-mail não cadastrado!");
+
+    // Fecha os statements
+    $stmt_aluno->close();
+    $stmt_professor->close();
 }
 ?>
