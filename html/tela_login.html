@@ -19,26 +19,24 @@
         <h1 id="txt_login">Login</h1> <!-- Adiciona um cabeçalho principal com o texto "Login". O "id" pode ser usado para estilização específica no CSS. -->
 
         <!-- Início do formulário -->
-        <form action="#" method="post"> <!-- O atributo "action" determina o local para onde os dados do formulário serão enviados. No momento, está com "#" (nenhum destino). -->
+        <form onsubmit="return validarFormularioLogin()" action="#" method="post"> <!-- Criação da tag form juntamente com a validação para que ela ocorra antes de enviar os dados -->
             <!-- Campo de entrada de e-mail -->
             <div class="email">
                 <h3>E-mail:</h3> <!-- Subtítulo do campo de entrada de e-mail. -->
-                <input id="box_email" type="email" placeholder="Digite seu E-mail" required> 
+                <input id="box_email" type="text" placeholder="Digite seu E-mail"> 
                 <!-- Cria o campo de entrada para e-mail:
                      - "id" permite manipulação via CSS ou JavaScript.
-                     - "type=email" assegura validação básica para formato de e-mail.
-                     - "placeholder" fornece um texto de exemplo no campo.
-                     - "required" exige que o campo seja preenchido antes do envio. -->
+                     - "type=text" assegura validação básica para formato de texto.
+                     - "placeholder" fornece um texto de exemplo no campo. -->
             </div>
             
             <!-- Campo de entrada de senha -->
             <div class="senha">
                 <h3>Senha:</h3> <!-- Subtítulo do campo de entrada de senha. -->
-                <input id="box_senha" type="password" placeholder="Digite sua Senha" required>
+                <input id="box_senha" type="password" placeholder="Digite sua Senha">
                 <!-- Cria o campo de entrada para senha:
                      - "type=password" esconde o texto digitado.
-                     - "placeholder" exibe um exemplo no campo até que o usuário comece a digitar.
-                     - "required" torna o preenchimento obrigatório. -->
+                     - "placeholder" exibe um exemplo no campo até que o usuário comece a digitar. -->
             </div>
 
             <!-- Botões do formulário -->
@@ -58,7 +56,7 @@
     </div>
 
     <!-- Importação de script externo -->
-    <script src="../js/script.js"></script>
-    <!-- O arquivo externo "script.js" é incluído para adicionar funcionalidades interativas ou validações ao formulário. -->
+    <script src="../js/validacao_login.js"></script>
+    <!-- O arquivo externo "validacao_login.js" é incluído para adicionar funcionalidades interativas ou validações ao formulário. -->
 </body>
 </html>

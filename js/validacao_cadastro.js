@@ -25,8 +25,8 @@ function validarFormularioCadastro() {
     }
 
     // Validação da senha: deve ter no mínimo 6 caracteres
-    if (senha.length < 6) {
-        alert("A senha deve ter no mínimo 6 caracteres!"); // Alerta se a senha for muito curta
+    if (senha.length < 8) {
+        alert("A senha deve ter no mínimo 8 caracteres!"); // Alerta se a senha for muito curta
         return false; // Impede o envio do formulário
     }
 
