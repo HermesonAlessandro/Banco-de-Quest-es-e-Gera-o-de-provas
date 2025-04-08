@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Tempo de geração: 07-Abr-2025 às 01:12
+-- Tempo de geração: 08-Abr-2025 às 23:05
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.0.30
 
@@ -24,28 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `alunos`
+-- Estrutura da tabela `aluno`
 --
 
-CREATE TABLE `alunos` (
+CREATE TABLE `aluno` (
   `cpf` bigint(20) NOT NULL,
   `nome_completo` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `senha` varchar(50) NOT NULL,
+  `senha` varchar(10000) DEFAULT NULL,
   `tipo_de_perfil` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `aluno`
+--
+
+INSERT INTO `aluno` (`cpf`, `nome_completo`, `email`, `senha`, `tipo_de_perfil`) VALUES
+(7775692308, 'Hermeson Alessandro Melo de Sousa', 'hermeson@gmail.com', '$2y$10$2mTzY.FfHt48G44RS.IIg.MPRCj8yPpzf3uYOi2Lljvdq4jPFHAN6', 'Aluno');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `professores`
+-- Estrutura da tabela `professor`
 --
 
-CREATE TABLE `professores` (
+CREATE TABLE `professor` (
   `cpf` bigint(20) NOT NULL,
   `nome_completo` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `senha` varchar(50) NOT NULL,
+  `senha` varchar(10000) NOT NULL,
   `tipo_de_perfil` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -54,15 +61,15 @@ CREATE TABLE `professores` (
 --
 
 --
--- Índices para tabela `alunos`
+-- Índices para tabela `aluno`
 --
-ALTER TABLE `alunos`
+ALTER TABLE `aluno`
   ADD PRIMARY KEY (`cpf`);
 
 --
--- Índices para tabela `professores`
+-- Índices para tabela `professor`
 --
-ALTER TABLE `professores`
+ALTER TABLE `professor`
   ADD PRIMARY KEY (`cpf`);
 COMMIT;
 

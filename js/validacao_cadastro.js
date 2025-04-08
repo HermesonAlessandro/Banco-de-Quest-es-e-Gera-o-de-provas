@@ -31,6 +31,6 @@ function validarFormularioCadastro() {
     }
 
     // Caso todas as validações sejam bem-sucedidas
-    alert("Formulário validado com sucesso!"); // Mensagem de validação bem-sucedida
+    alert("Cadastro realizado com sucesso!"); // Mensagem de validação bem-sucedida
     return true; // Permite o envio do formulário
 }

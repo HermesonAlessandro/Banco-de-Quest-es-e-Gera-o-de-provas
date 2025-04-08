@@ -19,24 +19,26 @@
         <h1 id="txt_login">Login</h1> <!-- Adiciona um cabeçalho principal com o texto "Login". O "id" pode ser usado para estilização específica no CSS. -->
 
         <!-- Início do formulário -->
-        <form onsubmit="return validarFormularioLogin()" action="#" method="post"> <!-- Criação da tag form juntamente com a validação para que ela ocorra antes de enviar os dados -->
+        <form onsubmit="return validarFormularioLogin()" action="../php/tela_login_autenticacao.php" method="post"> <!-- Criação da tag form juntamente com a validação para que ela ocorra antes de enviar os dados e uma ação em php que se encarregará de realizar o login -->
             <!-- Campo de entrada de e-mail -->
             <div class="email">
                 <h3>E-mail:</h3> <!-- Subtítulo do campo de entrada de e-mail. -->
-                <input id="box_email" type="text" placeholder="Digite seu E-mail"> 
+                <input id="box_email" type="text" name="email" placeholder="Digite seu E-mail"> 
                 <!-- Cria o campo de entrada para e-mail:
                      - "id" permite manipulação via CSS ou JavaScript.
                      - "type=text" assegura validação básica para formato de texto.
-                     - "placeholder" fornece um texto de exemplo no campo. -->
+                     - "placeholder" fornece um texto de exemplo no campo. 
+                     - "name" Serve para identificar o input -->
             </div>
             
             <!-- Campo de entrada de senha -->
             <div class="senha">
                 <h3>Senha:</h3> <!-- Subtítulo do campo de entrada de senha. -->
-                <input id="box_senha" type="password" placeholder="Digite sua Senha">
+                <input id="box_senha" type="password" name="senha" placeholder="Digite sua Senha">
                 <!-- Cria o campo de entrada para senha:
                      - "type=password" esconde o texto digitado.
-                     - "placeholder" exibe um exemplo no campo até que o usuário comece a digitar. -->
+                     - "placeholder" exibe um exemplo no campo até que o usuário comece a digitar. 
+                     - "name" serve para identificar o input -->
             </div>
 
             <!-- Botões do formulário -->

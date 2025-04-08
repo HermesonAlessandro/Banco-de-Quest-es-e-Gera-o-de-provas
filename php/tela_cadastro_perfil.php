@@ -3,17 +3,22 @@
 require_once "../php/conexao.php"; // Certifique-se de que o caminho está correto. Este arquivo contém as configurações para conectar ao banco de dados.
 
 // Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") { // Garante que o código só será executado se o método da requisição for POST (ou seja, se o formulário foi enviado).
+if ($_SERVER["REQUEST_METHOD"] == "POST") { // Garante que o código só será executado se o método da requisição for POST.
     
     // Obtém os dados enviados pelo formulário
-    $cpf = $_POST["cpf"]; // Captura o CPF fornecido pelo usuário.
-    $nome = $_POST["nome"]; // Captura o nome completo fornecido pelo usuário.
-    $email = $_POST["email"]; // Captura o e-mail fornecido pelo usuário.
-    $senha = $_POST["senha"]; // Captura a senha fornecida pelo usuário.
-    $perfil = $_POST["perfil"]; // Determina se o usuário será "Aluno" ou "Professor".
+    $cpf = trim($_POST["cpf"]); // Captura o CPF fornecido pelo usuário e remove espaços extras.
+    $nome = trim($_POST["nome"]); // Captura o nome completo fornecido pelo usuário.
+    $email = trim($_POST["email"]); // Captura o e-mail fornecido pelo usuário.
+    $senha = trim($_POST["senha"]); // Captura a senha fornecida pelo usuário.
+    $perfil = trim($_POST["perfil"]); // Determina se o usuário será "Aluno" ou "Professor".
+
+    // Verifica se os campos obrigatórios estão preenchidos
+    if (empty($cpf) || empty($nome) || empty($email) || empty($senha) || empty($perfil)) {
+        die("Erro: Todos os campos devem estar preenchidos!"); // Exibe mensagem de erro se algum campo estiver vazio.
+    }
 
     // Define a tabela com base no perfil selecionado
-    $tabela = ($perfil == "Aluno") ? "alunos" : "professores"; // Verifica se o perfil selecionado é "Aluno" ou "Professor" e define a tabela correspondente.
+    $tabela = ($perfil === "Aluno") ? "aluno" : "professor"; // Verifica se o perfil selecionado é "Aluno" ou "Professor".
 
     // Verifica se o CPF já está cadastrado na tabela correspondente
     $sql_verificacao = "SELECT cpf FROM $tabela WHERE cpf = ?"; // Consulta para verificar se o CPF já existe na tabela do banco de dados.
@@ -23,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Garante que o código só será e
     $stmt_verificacao->store_result(); // Armazena o resultado da consulta.
 
     if ($stmt_verificacao->num_rows > 0) { // Verifica se o CPF já existe na tabela.
-        die("Erro: Este CPF já está cadastrado como $perfil."); // Caso o CPF já esteja cadastrado, interrompe a execução do código e exibe uma mensagem de erro.
+        die("Erro: Este CPF já está cadastrado como $perfil."); // Interrompe a execução caso o CPF já esteja cadastrado.
     }
 
     // *** Hash da senha para segurança ***
