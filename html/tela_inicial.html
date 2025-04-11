@@ -4,6 +4,7 @@
     <meta charset="UTF-8"> <!-- Define a codificação como UTF-8, permitindo o uso de caracteres especiais (acentos, cedilha, etc.). -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define o layout responsivo para dispositivos móveis e diferentes tamanhos de tela. -->
     <link rel="stylesheet" href="../css/tela_inicial.css"> <!-- Linka um arquivo CSS externo para estilização da página. Atenção para as barras invertidas (\), que podem ser problemáticas em servidores Linux; substitua por barras normais (/). -->
+    <link rel="stylesheet" href="../css/carrossel.css"> <!-- Estilos específicos para o carrossel -->
     <title>Tela inicial</title> <!-- Define o título da página, que aparece na aba do navegador. -->
 </head>
 <body> 
@@ -32,6 +33,30 @@
           <button id="botton_comecar">Começar</button> <!-- Botão chamativo para redirecionar o usuário para o cadastro. -->
         </a>
     </div>
+    
+    <!-- Seção do Carrossel: área central da página que exibe imagens -->
+<section id="sessao_carrossel">
+    <div class="carrossel">
+        <!-- Container do Carrossel: agrupa todo o conteúdo do carrossel -->
+        <div class="carrossel_interativo">
+            <!-- Slide Ativado: representa o slide atualmente visível no carrossel -->
+            <div class="item_carrossel_ativado">
+                <img src="../Img/Carrossel_1.jpg" alt="Foto concurso 1"> <!-- Imagem do primeiro slide do carrossel -->
+            </div>
+            <!-- Slide Normal: outros slides que ficam ocultos até serem ativados -->
+            <div class="item_carrossel">
+                <img src="../Img/Carrossel_2.jpeg" alt="Foto concurso 2"> <!-- Imagem do segundo slide do carrossel -->
+            </div>
+            <div class="item_carrossel">
+                <img src="../Img/Carrossel_3.jpg" alt="Foto concurso 3"> <!-- Imagem do terceiro slide do carrossel -->
+            </div>
+        </div>
+        <!-- Botão de Navegação Anterior: permite voltar ao slide anterior -->
+        <button class="controle_anterior" onclick="itemAnterior()">&#10094;</button>
+        <!-- Botão de Navegação Próximo: permite avançar para o próximo slide -->
+        <button class="controle_proximo" onclick="proximoItem()">&#10095;</button>
+    </div>
+</section>
 
     <!-- Rodapé da página -->
     <div id="footer"> <!-- Container exclusivo do rodapé, identificado pelo ID. -->
@@ -46,5 +71,7 @@
           <!-- A menção ao ano é uma boa prática. Pode ser atualizado automaticamente com PHP ou JavaScript. -->
       </p>
     </div>
+
+    <script src="../js/carrossel.js"></script>
 </body>
 </html>

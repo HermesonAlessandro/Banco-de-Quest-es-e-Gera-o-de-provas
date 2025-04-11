@@ -1,0 +1,98 @@
+/* Container principal do carrossel */
+.carrossel {
+  position: relative; /* Posiciona o elemento relativamente ao container pai para conter os itens internos */
+  max-width: 800px; /* Define a largura máxima do carrossel */
+  margin: 20px auto; /* Centraliza o carrossel horizontalmente com espaçamento vertical */
+  overflow: hidden; /* Oculta as partes que excedem o container (apenas o slide ativo é visível) */
+  border-radius: 15px; /* Adiciona bordas arredondadas para um design mais moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Cria uma sombra sutil para profundidade */
+  background-color: #f9f9f9; /* Adiciona um fundo claro para contraste */
+}
+
+/* Área interna que contém os itens do carrossel */
+.carrossel_interativo {
+  display: flex; /* Organiza os itens lado a lado horizontalmente */
+  transition: transform 0.6s ease-in-out; /* Aplica uma transição suave na rotação dos slides */
+}
+
+/* Cada item do carrossel ocupa 100% do container */
+.item_carrossel {
+  min-width: 100%; /* Garante que cada slide ocupe 100% da largura do container */
+}
+
+/* Estilo das imagens do carrossel */
+.carrossel img {
+  width: 100%; /* Faz com que as imagens preencham todo o slide */
+  border-radius: 15px; /* Aplica bordas arredondadas às imagens, alinhando ao container */
+  display: block; /* Remove o espaço padrão ao redor das imagens */
+}
+
+/* Botões de navegação */
+.controle_anterior,
+.controle_proximo {
+  position: absolute; /* Permite posicionar os botões sobre o carrossel */
+  top: 50%; /* Centraliza os botões verticalmente no container */
+  transform: translateY(-50%); /* Ajusta a posição para manter o centro alinhado */
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para contraste visível */
+  color: #fff; /* Torna o texto (ou ícone) branco para melhor visibilidade */
+  border: none; /* Remove bordas padrão */
+  cursor: pointer; /* Muda o cursor para "mãozinha" ao passar sobre o botão */
+  padding: 10px 15px; /* Define o espaço interno dos botões */
+  font-size: 20px; /* Ajusta o tamanho do ícone ou texto dos botões */
+  border-radius: 50%; /* Cria botões circulares para um design limpo */
+  transition: background-color 0.3s ease; /* Adiciona um efeito suave ao passar o mouse */
+}
+
+/* Efeito de destaque ao passar o mouse nos botões de navegação */
+.controle_anterior:hover,
+.controle_proximo:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Escurece o fundo ao passar o mouse */
+}
+
+/* Botão de navegação anterior */
+.controle_anterior {
+  left: 10px; /* Posiciona o botão à esquerda do carrossel */
+}
+
+/* Botão de navegação próximo */
+.controle_proximo {
+  right: 10px; /* Posiciona o botão à direita do carrossel */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) { /* Aplica estilos específicos para dispositivos menores */
+  .carrossel {
+    max-width: 100%; /* Permite que o carrossel ocupe toda a largura da tela */
+    border-radius: 10px; /* Reduz o arredondamento das bordas para telas pequenas */
+  }
+
+  .controle_anterior,
+  .controle_proximo {
+    font-size: 16px; /* Reduz o tamanho dos botões para telas menores */
+    padding: 8px 12px; /* Ajusta o preenchimento interno dos botões */
+  }
+}
+
+/* Indicadores de progresso (opcional) */
+.indicadores {
+  position: absolute; /* Permite posicionar os indicadores sobre o carrossel */
+  bottom: 10px; /* Posiciona os indicadores na parte inferior do carrossel */
+  left: 50%; /* Centraliza os indicadores horizontalmente */
+  transform: translateX(-50%); /* Ajusta o alinhamento central */
+  display: flex; /* Exibe os indicadores lado a lado */
+  gap: 8px; /* Adiciona espaçamento entre os indicadores */
+}
+
+/* Estilo padrão dos indicadores */
+.indicador {
+  width: 12px; /* Define a largura de cada indicador */
+  height: 12px; /* Define a altura de cada indicador (formato circular) */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente padrão */
+  border-radius: 50%; /* Torna os indicadores circulares */
+  cursor: pointer; /* Muda o cursor para "mãozinha" ao passar sobre os indicadores */
+}
+
+/* Indicador ativo (representa o slide atual visível) */
+.indicador.ativo {
+  background-color: rgba(0, 0, 0, 0.8); /* Torna o indicador mais escuro para destaque */
+}
