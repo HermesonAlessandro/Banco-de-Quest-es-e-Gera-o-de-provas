@@ -1,52 +1,110 @@
 /*---------------------------------------------------------NOMES-----------------------------------------------------------------------------*/
 
-body{     /* Altera todo o conteúdo da página */
-    background: linear-gradient(to right, #003366, #40E0D0); /* Cria um fundo em degradê que vai da esquerda para a direita, com cores azul-escuro (#003366) e turquesa (#40E0D0). */
+body { /* Altera todo o conteúdo da página */
+  background: linear-gradient(to right, #003366, #40E0D0); /* Cria um fundo em degradê que vai da esquerda para a direita, com cores azul-escuro (#003366) e turquesa (#40E0D0). */
 }
 
 /*---------------------------------------------------------IDs-----------------------------------------------------------------------------*/
-
-#botton_sobre{   /* Faz alterações específicas no botão "Sobre Nós". */
-    position: relative;  /* Permite ajustar a posição do botão em relação ao seu container original. */
-    left: 1030px; /* Move o botão horizontalmente para a direita, com base no posicionamento relativo. */
-    width: 100px;  /* Define a largura do botão como 100px. */
-    padding: 10px; /* Define o espaço interno do botão, aumentando a altura por meio de preenchimento interno. */
-    color: white;  /* Altera a cor do texto dentro do botão para branco. */
-    background-color: rgba(0, 0, 0, 0.334);  /* Define a cor de fundo do botão com um tom preto semi-transparente. */
+#logo{
+  width: 8%; /* Define a largura do logo como 8% da largura do container pai. */
+  position: relative; /* Permite ajustar a posição do logo em relação ao seu container original. */
+  top: 10%; /* Move o logo 10% para baixo em relação à posição original. */
+  left: 20px; /* Move o logo 20px para a esquerda em relação à posição original. */
 }
 
-#box_search{ /* Faz alterações na caixa de pesquisa. */
-    position: relative;  /* Permite ajustar sua posição em relação ao seu container original. */
-    left: 550px; /* Move a caixa de pesquisa horizontalmente para a direita. */
-    width: 255px; /* Define a largura da caixa de pesquisa como 255px. */
-    padding: 10px; /* Ajusta o espaço interno para aumentar a altura. */
-    margin-right: -80px; /* Define uma margem negativa para aproximar o botão "Sobre Nós" da caixa de pesquisa. */
-    border: 2px solid black; /* Adiciona uma borda sólida preta com 2px de espessura. */
-    border-radius: 30px; /* Arredonda os cantos da borda da caixa de pesquisa em 30px, criando um efeito estético. */
+#button_sobre { /* Faz alterações específicas no botão "Sobre Nós". */
+  position: relative; /* Permite ajustar a posição do botão em relação ao seu container original. */
+  left: 1000px; /* Move o botão 1000px para a direita. */
+  bottom: 135px; /* Move o botão 135px para baixo em relação à sua posição original. */
+  width: 100px; /* Define a largura do botão como 100px. */
+  padding: 10px; /* Define o espaço interno do botão, aumentando a altura por meio de preenchimento interno. */
+  color: white; /* Define a cor do texto do botão como branco. */
+  background-color: rgba(0, 0, 0, 0.334); /* Define a cor de fundo do botão como preto semi-transparente (30% de opacidade). */
 }
 
-#footer{ /* Faz alterações no rodapé da página. */
-    position: relative; /* Define a posição como relativa para facilitar o ajuste do rodapé. */
-    top: 390px; /* Move o rodapé verticalmente para baixo. */
-    text-align: center; /* Centraliza o texto dentro do rodapé. */
-    color: rgb(0,0,0); /* Define a cor do texto do rodapé como preto (rgb). */
-    text-decoration: none; /* Remove qualquer sublinhado do texto ou links no rodapé. */
+#box_search { /* Faz alterações na caixa de pesquisa. */
+  position: relative; /* Permite ajustar a posição da caixa de pesquisa em relação ao seu container original. */
+  left: 550px; /* Move a caixa de pesquisa 550px para a direita. */
+  bottom: 130px; /* Move a caixa de pesquisa 130px para baixo. */
+  width: 255px; /* Define a largura da caixa de pesquisa como 255px. */
+  padding: 10px; /* Define o espaço interno da caixa de pesquisa, aumentando a altura. */
+  margin-right: -80px; /* Aplica uma margem negativa para aproximar a caixa de pesquisa do botão "Sobre Nós". */
+  border: 2px solid black; /* Adiciona uma borda sólida preta de 2px de espessura. */
+  border-radius: 30px; /* Arredonda os cantos da borda da caixa de pesquisa em 30px, criando um efeito estético. */
 }
 
-#botton_comecar{ /* Estiliza o botão "Começar". */
-    color: white; /* Altera a cor do texto dentro do botão para branco. */
-    width: 10%; /* Define a largura do botão como 10% do tamanho do container. */
-    padding: 0.1%; /* Adiciona preenchimento interno ao botão para melhorar o visual. */
-    background-color: #003366; /* Define a cor de fundo como azul-escuro (#003366). */
-    position: relative; /* Define a posição como relativa para facilitar o ajuste do botão. */
-    left: 600px; /* Move o botão horizontalmente para a direita. */
+#footer { /* Faz alterações no rodapé da página. */
+  position: relative; /* Define a posição como relativa para facilitar o ajuste do rodapé. */
+  top: 390px; /* Move o rodapé 390px para baixo. */
+  text-align: center; /* Centraliza o texto dentro do rodapé. */
+  color: rgb(0, 0, 0); /* Define a cor do texto do rodapé como preto. */
+  text-decoration: none; /* Remove qualquer sublinhado do texto ou links no rodapé. */
 }
 
-#texto_convidativo{ /* Faz alterações no texto principal da página. */
-    text-align: center; /* Centraliza o texto na página. */
-    color: aliceblue; /* Define a cor do texto como "aliceblue", um tom de azul claro. */
+#botton_comecar { /* Estiliza o botão "Começar". */
+  color: white; /* Define a cor do texto dentro do botão como branco. */
+  width: 10%; /* Define a largura do botão como 10% da largura do container pai. */
+  padding: 0.1%; /* Adiciona um preenchimento interno de 0.1% para dar uma melhor aparência. */
+  background-color: #003366; /* Define a cor de fundo como azul-escuro (#003366). */
+  position: relative; /* Define a posição como relativa para facilitar o ajuste do botão. */
+  left: 600px; /* Move o botão 600px para a direita. */
+  bottom: 100px; /* Move o botão 100px para baixo em relação à sua posição original. */
+}
+
+#texto_convidativo { /* Faz alterações no texto principal da página. */
+  text-align: center; /* Centraliza o texto na página. */
+  color: aliceblue; /* Define a cor do texto como "aliceblue", que é um tom claro de azul. */
+  position: relative; /* Permite ajustar a posição do texto em relação à sua posição original. */
+  bottom: 100px; /* Move o texto 100px para baixo. */
+  left: 30px; /* Move o texto 30px para a esquerda. */
+}
+
+#anterior { 
+  left: 10px; /* Move o botão "anterior" 10px para a esquerda. */
+}
+
+#proximo { 
+  right: 10px; /* Move o botão "próximo" 10px para a direita. */
 }
 
 /*---------------------------------------------------------CLASS-----------------------------------------------------------------------------*/
 
-/* Neste código, não há classes definidas diretamente. No caso de classes adicionais, elas podem ser usadas para estilizar elementos que compartilhem características semelhantes. */
+.carrossel { /* Estiliza o carrossel de imagens. */
+  position: relative; /* Define a posição do carrossel como relativa para facilitar o ajuste. */
+  bottom: 85px; /* Move o carrossel 85px para baixo. */
+  width: 559px;  /* Define a largura do carrossel como 559px. */
+  height: 310px; /* Define a altura do carrossel como 310px. */
+  overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse o limite do carrossel. */
+  margin: auto; /* Centraliza o carrossel horizontalmente. */
+  border-radius: 10px; /* Arredonda os cantos do carrossel em 10px. */
+  box-shadow: 0 0 10px #0005; /* Adiciona uma sombra suave em torno do carrossel para um efeito de profundidade. */
+}
+
+.slides {
+  display: flex; /* Exibe os itens dentro da classe "slides" de forma flexível (em linha). */
+  width: 100%; /* Define a largura das "slides" como 100% do container. */
+  height: 100%; /* Define a altura das "slides" como 100% do container. */
+  transition: transform 0.5s ease-in-out; /* Adiciona uma transição suave ao mover as slides, durando 0.5s. */
+}
+
+.slides img { /* Define o estilo das imagens dentro do carrossel. */
+  width: 600px; /* Define a largura das imagens como 600px. */
+  height: 320px; /* Define a altura das imagens como 320px. */
+  object-fit: cover; /* Garante que as imagens cubram o espaço do container, mantendo a proporção. */
+  align-items: center; /* Alinha as imagens verticalmente no centro. */
+  position: relative; /* Permite ajustar a posição das imagens em relação à sua posição original. */
+  bottom: 10px; /* Move a imagem 10px para baixo. */
+  
+}
+
+.buttton { /* Estiliza os botões de navegação do carrossel (anterior e próximo). */
+  position: absolute; /* Posiciona o botão de forma absoluta em relação ao carrossel. */
+  top: 50%; /* Posiciona o botão no meio vertical do carrossel. */
+  transform: translateY(-50%); /* Ajusta a posição do botão para que ele fique centralizado verticalmente. */
+  background: #003366cc; /* Define a cor de fundo do botão como azul-escuro semi-transparente. */
+  color: white; /* Define a cor do texto dentro do botão como branco. */
+  border: none; /* Remove qualquer borda do botão. */
+  padding: 10px; /* Adiciona um preenchimento de 10px ao botão. */
+  cursor: pointer; /* Altera o cursor para "pointer" quando o usuário passa o mouse sobre o botão. */
+  z-index: 1; /* Define a camada do botão para garantir que ele fique acima de outros elementos. */
+}

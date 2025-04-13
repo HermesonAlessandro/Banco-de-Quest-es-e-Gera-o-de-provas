@@ -19,6 +19,8 @@ img {
     width: 130px; /* Define a largura fixa da imagem (logotipo). */
     height: 145px; /* Define a altura fixa da imagem. */
     margin-bottom: 20px; /* Adiciona um espaço abaixo da imagem para separar visualmente os elementos. */
+    position: relative;
+    right:580px;
 }
 
 #titulo-resetar {
