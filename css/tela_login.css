@@ -1,81 +1,114 @@
 /*---------------------------------------------------------CLASS-----------------------------------------------------------------------------*/
-.email, .senha{ /*Altera as Divs do email e da senha */
-    font-size: 18px; /* Define o tamanho da fonte do texto */
-    color: rgb(0,0,0,0.8); /* Preto com opacidade de 80% */ 
-    font-family: arial; /* Usa a fonte Arial para o texto */
-    margin: 10px; /* Adiciona 10px de espaçamento externo ao redor */
-}   
-
-.links{  /* Altera os textos dos links*/    
-    display: block;     /* Garante que cada link fique em uma linha separada */
-    text-decoration: none;     /* Remove o sublinhados dos links */
-    color: rgb(1, 10, 88);    /* Azul escuro */
-    text-align: center;      /* Centraliza o texto dentro de cada link */
-    margin-bottom: 10px;     /* Adiciona um espaço entre os links */
-    margin: 10px;    /* Altera a margem deles com a tela deformulário*/
-}
-.formulario { /* altera todo o formulario*/
-    background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255)); /* Define um fundo degradê com cores acinzentadas */
-    background-size: 10px 50px;     /* Ajusta as dimensões do gradiente do formulário */
-    border-radius: 30px;     /* Arredonda os cantos do formulário */
-    padding: 20px 5px;       /* 20px de padding nas partes superior e inferior, e 5 px nas laterais */
-    width: 550px;      /* Define a largura do formulário */
-    margin: 0 auto;     /* Centraliza o formulário na tela */
-    position: relative;     /* Permite deslocar o formulário visualmente */
-    top: -85px;    /* Desloca o formulário 85px para cima */
+.email, .senha { /* Estiliza as divs que envolvem os campos de e-mail e senha */
+    font-size: 18px; /* Define o tamanho da fonte como 18px */
+    color: rgb(0, 0, 0, 0.8); /* Preto com 80% de opacidade */
+    font-family: arial; /* Fonte Arial */
+    margin: 10px; /* Espaçamento externo de 10px em todos os lados */
 }
 
-/*@media screen(max-width:580){   RESPONSIVIDADE
-    .links{
-        font-size: ;
-    }*/
+.links { /* Estiliza os textos dos links */
+    display: block; /* Cada link ocupa uma linha inteira */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: rgb(1, 10, 88); /* Azul escuro */
+    text-align: center; /* Centraliza o texto dos links */
+    margin-bottom: 10px; /* Espaço abaixo do link */
+    margin: 10px; /* Define margem externa (substitui o margin-bottom anterior) */
+}
+
+.formulario { /* Estiliza o contêiner do formulário */
+    background: linear-gradient(to right, rgb(225, 225, 255), rgb(224, 222, 255)); /* Fundo degradê suave */
+    background-size: 10px 50px; /* Tamanho do gradiente */
+    border-radius: 30px; /* Bordas arredondadas */
+    padding: 20px 5px; /* 20px vertical, 5px horizontal */
+    width: 550px; /* Largura fixa */
+    margin: 0 auto; /* Centraliza na tela */
+    position: relative; /* Permite ajuste com top/bottom */
+    top: -85px; /* Move o formulário 85px para cima */
+}
+
+/* Responsividade (comentado e incompleto)
+@media screen(max-width:580){
+    .links {
+        font-size: ; 
+    }
+*/
+
 /*---------------------------------------------------------IDs-----------------------------------------------------------------------------*/
-#corpo_do_site {  /* Altera a página */
-    text-align: center; /* Centraliza todo o testo do formulário de Login */
-    background: linear-gradient(#003366, #40E0D0);/* Cria um fundo em degradê */
-    padding: 20px; /* Adiciona espaçamento interno */
-    margin: 10.5px; /* Adiciona espaçamento externo */
+#corpo_do_site { /* Estiliza o corpo principal da página */
+    text-align: center; /* Centraliza o conteúdo */
+    background: linear-gradient(#003366, #40E0D0); /* Fundo azul escuro para turquesa */
+    padding: 20px; /* Espaço interno */
+    margin: 10.5px; /* Espaço externo */
 }
 
-#txt_login{ /* Altera o texto "Login"*/
-    font-size: 50px; /* Altera o tamanho do texto */
-    position: relative; /* Permite deslocar a imagem em relação à sua posição original */
+#txt_login { /* Estiliza o texto "Login" */
+    font-size: 50px; /* Tamanho grande para destaque */
+    position: relative; /* Permite movimentação com bottom */
     bottom: 15px; /* Move 15px para cima */
-    color: #003366; /* Altera a cor  do texto para um tom azul escuro */ 
+    color: #003366; /* Azul escuro */
+}
 
+#box_email, #box_senha { /* Estiliza os campos de entrada de e-mail e senha */
+    background-color: white; /* Fundo branco */
+    color: black; /* Texto preto */
+    padding: 9.5px; /* Espaço interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    border-style: solid; /* Borda sólida */
+    border-width: 0.1px; /* Borda muito fina */
 }
-#box_email, #box_senha { /* Altera as caixas de preenchimento de senha e email */
-    background-color: white; /* Cor do fundo */
-    color: black; /* Garante que o texto seja legível */
-    padding:9.5px ; /* Adiciona um espaçamento de 9.5px em todos os lados */
-    border-radius: 20px; /* Arredonda as bordas das caixas */
-    border-style: solid; /* Defina a borda como sólida */
-    border-width: 0.1px; /* Defina a espessura muito fina */
+
+#lab_perfil { /* Estiliza o rótulo do campo de perfil */
+    margin-right: 18px; /* Espaço à direita */
+    font-size: 25px; /* Tamanho do texto */
+    position: relative; /* Permite reposicionamento */
+    right: 110px; /* Move 110px para a esquerda */
+    top: 28px; /* Move 28px para baixo */
 }
+
+#box_perfil { /* Estiliza a caixa de seleção de perfil */
+    color: rgb(250, 249, 249); /* Quase branco */
+    background-color: #003366; /* Fundo azul escuro */
+    font-family: arial; /* Fonte Arial */
+    font-size: 15px; /* Tamanho da fonte */
+    position: relative; /* Permite ajuste fino */
+    border-radius: 15px; /* Arredonda as bordas */
+    bottom: 250px; /* Move a caixa para cima */
+    padding: 10px; /* Espaço interno */
+    right: 40px; /* Move à esquerda */
+    margin: 25px; /* Espaço externo */
+    border: 1px solid black; /* Borda preta fina */
+}
+
+#button_voltar { /* Estiliza o botão "Voltar" */
+    position: relative; /* Permite posicionamento */
+    bottom: 280px; /* Move o botão para cima */
+    left: 130px; /* Move o botão para a direita */
+}
+
 /*---------------------------------------------------------NOMES-----------------------------------------------------------------------------*/
-input{/* Altera as caixas de texto*/
-    margin: 2px; /* Adiciona um pequeno espaçamento externo de 2px  ao redor das caixas de texto */
-    width: 55%;  /* Define que a largura das caixas será de 55% do elemento pai */
+input { /* Estiliza todos os campos de entrada */
+    margin: 2px; /* Pequeno espaçamento externo */
+    width: 55%; /* Ocupa 55% da largura do contêiner pai */
 }
 
-h3 {   /*  alterar o texto "senha" e "email"*/
-    margin: 2px; /* Adiciona um pequeno espaçamento externo de 2px  ao redor das caixas de texto */
-}   
-
-button{ /* Altera as propiededades do botao de "entrar"*/
-    color: white;    /* Definição da cor do texto */
-    background-color: #003366;   /* Definição do fundo */
-    margin: 25px;    /* Adiciona 25px de espaçamento externo em todas as direções */
-    padding: 10px;     /* Altera a altura do botão*/
-    width: 110px;     /* Altera a largura do botao*/
-    font-family: helvetica; /* Usa a fonte Helvetica para o texto do botão */
-    border-radius: 15px;  /* Arrendonda a borda dos botôes  */ 
+h3 { /* Estiliza os títulos "Senha" e "Email" */
+    margin: 2px; /* Pequeno espaçamento externo */
 }
 
-img{ /* Altera as propiedades da Logo */
-    width: 130px; /* Largura */
-    height: 145.5px; /* Altura */
-    position: relative; /* Permite deslocar a imagem em relação à sua posição original */
-    bottom: 40px; /* Move 40px para cima */
-    right: 550px; /* Move 550px para a esquerda */
+button { /* Estiliza o botão "Entrar" */
+    color: white; /* Cor do texto */
+    background-color: #003366; /* Fundo azul escuro */
+    margin: 25px; /* Espaço externo */
+    padding: 10px; /* Altura do botão */
+    width: 110px; /* Largura do botão */
+    font-family: helvetica; /* Fonte Helvetica */
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+img { /* Estiliza a logo */
+    width: 130px; /* Largura da imagem */
+    height: 145.5px; /* Altura da imagem */
+    position: relative; /* Permite reposicionar */
+    bottom: 40px; /* Move a imagem para cima */
+    right: 550px; /* Move a imagem para a esquerda */
 }

@@ -44,7 +44,7 @@
             <!-- Botões do formulário -->
             <button type="submit">Entrar</button> <!-- Botão para enviar os dados do formulário. -->
             <!-- Botão "Voltar" que redireciona o usuário para a tela inicial -->
-            <button type="button" onclick="location.href='tela_inicial.html';">Voltar</button>
+            <button id="button_voltar" type="button" onclick="location.href='tela_inicial.html';">Voltar</button>
         </form>
         
         <!-- Links adicionais -->
@@ -60,5 +60,15 @@
     <!-- Importação de script externo -->
     <script src="../js/validacao_login.js"></script>
     <!-- O arquivo externo "validacao_login.js" é incluído para adicionar funcionalidades interativas ou validações ao formulário. -->
+    <div>
+        <label id="lab_perfil" for="perfil"><b>Selecione seu Perfil:</b></label>   
+        <select id="box_perfil" name="perfil">
+            <!-- `select`: Permite ao usuário escolher entre opções predefinidas. -->
+            <option value="" disabled selected>Escolha o perfil</option> 
+            <!-- Placeholder inicial que não pode ser selecionado como opção válida. -->
+            <option value="Aluno">Aluno</option> <!-- Perfis predefinidos. -->
+            <option value="Professor">Professor</option>
+        </select>
+    </div>
 </body>
 </html>
